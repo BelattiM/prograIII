@@ -1,0 +1,16 @@
+
+
+
+
+
+/*  IMPORTACIONES DE FONT*/
+@import url(../css/base/typography.css);
+
+/* IMPORTACIONES DE PAGES*/
+
+
+
+/* IMPORTACIONES DE COMPONENTES*/
+@import url(../css/componentes/body.css);
+@import url(../css/componentes/header.css);
+@import url(../css/componentes/footer.css);
