@@ -32,18 +32,11 @@ img{
     margin-top: 10px ;
     margin-bottom: 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 img{
     width: 5%;
+}
+
+.bug_report a {
+    color: #b95;
+    display: flex;
 }

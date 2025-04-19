@@ -9,3 +9,166 @@ body {
     background-attachment: fixed;  /* hace que el fondo quede fijo al hacer scroll (opcional) */
 
 }
+
+/*========================================INICIO DE SESION===========================================*/
+.body_inicio_sesion {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url(../../img/Fondo_InicioSesion.png);
+    background-size: cover;        /* hace que la imagen cubra todo el fondo */
+    background-position: center;   /* centra la imagen */
+    background-repeat: no-repeat;  /* evita que la imagen se repita */
+    background-attachment: fixed;  /* hace que el fondo quede fijo al hacer scroll (opcional) */
+}
+
+.formulario_inicio_sesion {
+    width: 320px;
+    margin: 30px left;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.8);;
+    margin: 80px auto;
+    border-radius: 10px;
+}
+  
+.formulario_inicio_sesion input[type="email"],
+.formulario_inicio_sesion input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+  
+.formulario_inicio_sesion button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+  
+.formulario_inicio_sesion button:hover {
+    background-color: #0056b3;
+}
+ 
+.formulario_inicio_sesion a {
+    color: #007BFF;
+    text-decoration: underline;
+}
+
+/*========================================REGISTRO DE SESION===========================================*/
+.body_registro_sesion {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url(../../img/Fondo_RegistroSesion.png);
+    background-size: cover;        /* hace que la imagen cubra todo el fondo */
+    background-position: center;   /* centra la imagen */
+    background-repeat: no-repeat;  /* evita que la imagen se repita */
+    background-attachment: fixed;  /* hace que el fondo quede fijo al hacer scroll (opcional) */
+}
+
+.formulario_registro_sesion {
+    width: 500px;
+    margin: 30px left;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.8);;
+    margin: 80px auto;
+    border-radius: 10px;
+}
+  
+.formulario_registro_sesion input[type="text"],
+.formulario_registro_sesion input[type="email"],
+.formulario_registro_sesion input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+  
+.formulario_registro_sesion input[type="date"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.formulario_registro_sesion button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.formulario_registro_sesion button:hover {
+    background-color: #0056b3;
+}
+.formulario_registro_sesion a {
+    color: #007BFF;
+    text-decoration: underline;
+}
+
+.formulario_registro_sesion input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.formulario_registro_sesion select {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+/*========================================REPORTE DE ERROR===========================================*/
+
+.formulario_reporte_error {
+    width: 500px;
+    margin: 30px left;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.8);;
+    margin: 80px auto;
+    border-radius: 10px;
+}
+
+.formulario_reporte_error input[type="email"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.formulario_reporte_error textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
