@@ -31,7 +31,7 @@ body {
     border-radius: 10px;
 }
   
-.formulario_inicio_sesion input[type="email"],
+.formulario_inicio_sesion input[type="text"],
 .formulario_inicio_sesion input[type="password"] {
     width: 100%;
     padding: 12px;
@@ -45,8 +45,8 @@ body {
 .formulario_inicio_sesion button {
     width: 100%;
     padding: 12px;
-    background-color: #007BFF;
-    color: white;
+    background-color: #b95;
+    color: black;
     border: none;
     font-size: 16px;
     border-radius: 5px;
@@ -56,11 +56,11 @@ body {
 }
   
 .formulario_inicio_sesion button:hover {
-    background-color: #0056b3;
+    background-color: rgb(188, 139, 40);
 }
  
 .formulario_inicio_sesion a {
-    color: #007BFF;
+    color: #b95;
     text-decoration: underline;
 }
 
@@ -110,8 +110,8 @@ body {
 .formulario_registro_sesion button {
     width: 100%;
     padding: 12px;
-    background-color: #007BFF;
-    color: white;
+    background-color: #b95;
+    color: black;
     border: none;
     font-size: 16px;
     border-radius: 5px;
@@ -121,10 +121,10 @@ body {
 }
 
 .formulario_registro_sesion button:hover {
-    background-color: #0056b3;
+    background-color: rgb(188, 139, 40);;
 }
 .formulario_registro_sesion a {
-    color: #007BFF;
+    color: #b95;
     text-decoration: underline;
 }
 
@@ -177,12 +177,16 @@ body {
 .formulario_reporte_error button {
     width: 100%;
     padding: 12px;
-    background-color: #007BFF;
-    color: white;
+    background-color: #b95;
+    color: black;
     border: none;
     font-size: 16px;
     border-radius: 5px;
     cursor: pointer;
     margin-top: 10px;
     transition: background-color 0.3s;
+}
+
+.formulario_reporte_error button:hover {
+    background-color: rgb(188, 139, 40);;
 }
