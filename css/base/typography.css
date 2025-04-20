@@ -1,6 +1,13 @@
 @font-face {
     font-family: Josefin-sans;
-    src: url(Josefin-sans/JosefinSans-SemiBold.ttf) format(truetype);
+    src: url(../fuentes/Josefin-sans/JosefinSans-SemiBold.ttf) format(truetype);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Josefin-sans;
+    src: url(../fuentes/Josefin-sans/JosefinSans-Bold.ttf) format(truetype);
+    font-weight: 700;
 }
 *{
     font-family: "Josefin-sans";  
