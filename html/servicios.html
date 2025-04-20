@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Modales separados</title>
+    <link rel="stylesheet" href="../css/paginas/cards.css">
+</head>
+<body>
+    <header>
+        <div class="links_header articulos_header">
+            <a href="index.html"> <img src="../img/logo.png" alt="logoPage" title="Home" class="img_header"> </a>
+            <a href="#">Campeones</a>
+            <a href=" https://lolesports.com/es-MX/" target="_blank">eSports</a>
+        </div>
+        <input type="text" placeholder="Buscar" class="barra_header">
+        <div class="form_sesiones_header articulos_header">
+            <nav>
+                <a href="IniciarSesion.html">Iniciar Sesion</a>
+                <a href="Registrarse.html">Registrarse</a>
+            </nav>
+        </div>
+        
+    </header>
+    <main>
+        <!-- Donde se cargan las cards -->
+        <div id="contenedor-cards"></div>
+
+        <!-- Donde se cargan los modales -->
+        <div id="contenedor-modales"></div>
+    </main>
+
+    <footer>
+        <div class="enlaces_footer">
+            <div class="contacto">
+                <p>email@gmail.com</p>
+                <p>291-291-291</p>
+            </div>
+            <div class="creditos">
+                <img src="../img/logo_creditos.png" alt="logoCreditos">
+                <p>Diseñado por los pibes © 2025</p>
+            </div>
+            <div class="redes">
+                <a href="#"><img src="../img/icon_instagram.png" alt="Instagram" title="Instagram"></a>
+                <a href="#"><img src="../img/icon_facebook.png" alt="Facebook" title="Facebook"></a>
+                <a href="#"><img src="../img/icon_x.png" alt="Tweeter" title="Tweeter"></a>
+                <a href="#"><img src="../img/inco_youtube.png" alt="Youtube" title="Youtube"></a>
+            </div>
+        </div>
+        <div class="bug_report">
+            <nav>
+                <a href="BugReport.html">Reportar un error</a>
+            </nav>
+        </div>
+    </footer>
+    <script>
+    async function cargarContenido() {
+        const cards = await fetch('cards.html').then(r => r.text());
+        document.getElementById('contenedor-cards').innerHTML = cards;
+
+        const modales = await fetch('modales.html').then(r => r.text());
+        document.getElementById('contenedor-modales').innerHTML = modales;
+
+        // Cargar script una vez que el contenido esté listo
+        const script = document.createElement('script');
+        script.src = '../js/script.js';
+        document.body.appendChild(script);
+    }
+    document.addEventListener('DOMContentLoaded', cargarContenido);
+    </script>
+
+</body>
+</html>
