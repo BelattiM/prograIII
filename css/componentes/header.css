@@ -49,8 +49,8 @@ header{
     background-color: transparent;
     border-radius: 10px;
     border: none;
-    border-bottom: 1px solid #000;
-    border-left: 1px solid #000;
+    border-bottom: 1px solid #999;
+    border-left: 1px solid #999;
 }
 
 nav {
@@ -60,5 +60,5 @@ nav {
 
 a{
     text-decoration: none;
-    color: #bbb;
+    color: #999;
 }
