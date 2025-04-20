@@ -1,9 +1,30 @@
-main {
-    background-image: url(../img/FondoCards.jpg);
+.encabezado-cards{
+    margin-top: 2%;
+    background-color: #0008;
+    border-radius: 15px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 71%;
 }
 
-main{
+.encabezado-cards h2{
+    color: #b95;
+    width: fit-content;
+    margin-bottom: 0;
+}
+
+.encabezado-cards p{
+    width: 60%;
+    color: #b95;
+    text-align: center;
+}
+
+.main-cards{
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .encabezado{
