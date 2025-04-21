@@ -3,11 +3,13 @@
 @import url(../css/base/typography.css);
 
 /* IMPORTACIONES DE PAGES*/
-
-
-
+@import url(../css/paginas/modales.css);
+@import url(../css/paginas/index.css);
+@import url(../css/paginas/bugreport.css);
+@import url(../css/paginas/iniciarsesion.css);
+@import url(../css/paginas/registrarse.css);
+@import url(../css/paginas/cards.css);
 /* IMPORTACIONES DE COMPONENTES*/
 @import url(../css/componentes/body.css);
 @import url(../css/componentes/header.css);
 @import url(../css/componentes/footer.css);
-@import url(../css/paginas/styles.css);

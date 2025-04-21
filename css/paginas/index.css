@@ -1,0 +1,28 @@
+.contenedor-home{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.contenedor-home a{
+    width: 30%
+}
+
+.contenedor-home a img{
+    width: 100%;
+}
+
+.contenedor-home p{
+    width: 80%;
+    background-color: #0008;
+    color: #b95;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+video{
+    border: 5px solid #b95;
+    width: 80%;
+}
