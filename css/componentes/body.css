@@ -1,0 +1,11 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url(../../img/fondo_body.png);
+    background-size: cover;        /* hace que la imagen cubra todo el fondo */
+    background-position: center;   /* centra la imagen */
+    background-repeat: no-repeat;  /* evita que la imagen se repita */
+    background-attachment: fixed;  /* hace que el fondo quede fijo al hacer scroll (opcional) */
+
+}

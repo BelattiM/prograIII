@@ -1,0 +1,62 @@
+footer{
+    width: 100%;
+    margin: 0;
+    background-color: #012;
+    position: static;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.enlaces_footer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.redes{
+    width: 15%;
+    padding: auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.redes a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.redes img{
+    padding: 1%;
+    margin-top: 10px ;
+    margin-bottom: 0;
+    width: 70%;
+
+}
+.creditos{
+    color: #b95;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+}
+.creditos img{
+    margin-top: 10px ;
+    margin-bottom: 0;
+    width: 10%;
+}
+.contacto{
+    color: #b95;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 15%;
+}
+.bug_report{
+    padding: 5px;
+}
+.bug_report a {
+    color: #b95;
+    display: flex;
+}
