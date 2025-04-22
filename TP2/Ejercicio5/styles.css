@@ -1,0 +1,29 @@
+body{
+    display: flex;
+    justify-content: center;
+}
+
+form{
+    border: 2px solid #888 ;
+    border-radius: 5px;
+    background-color: #ddd;
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    justify-content: center;
+    align-items: center;
+}
+
+form input{
+    margin: 5px 0
+}
+
+button{
+    width: 25%;
+    align-content: center;
+}
+
+.error{
+    font-size: 16px;
+    color:#f00;
+}

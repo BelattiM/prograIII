@@ -1,0 +1,30 @@
+.contenedor-parrafos{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.parrafo{
+    width: 30%;
+    margin: 10px;
+    padding: 5px;
+    border: 1px solid #4b9;
+}
+
+.contenedor-botones{
+    justify-content: center;
+    width: 100%;
+    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.oculto{
+    display: none;
+}
+
+.resaltado{
+    background-color: #ff0;
+    font-size: bold;
+}
