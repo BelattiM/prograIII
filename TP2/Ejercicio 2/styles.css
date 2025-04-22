@@ -1,0 +1,78 @@
+.Titulo {
+    font-size: 30px;
+    color: #b95;
+    text-align: center;
+    font-family: 'poppins', sans-serif;
+    font-weight: bold;
+    text-decoration: underline;
+    margin: 20px 0;
+}
+
+#inputText {
+    width: 80%;
+    height: 50px;
+    font-size: 20px;
+    border-radius: 5px;
+    border: 2px solid #b95;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 20px auto;
+    display: flex;
+    font-family: 'poppins', sans-serif;
+    background-color: rgb(56, 56, 56);
+}
+
+#btn {
+    width: 40%;
+    height: 50px;
+    font-size: 20px;
+    border-radius: 5px;
+    border: 2px solid #b95;
+    background-color: #b95;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    display: flex;
+    font-family: 'poppins', sans-serif;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+}
+
+#list {
+    background-color: rgb(149, 116, 51);
+    border-radius: 15px;
+    align-items: center;
+    flex-direction: column;
+    width: 70%;
+    padding: 20px;
+    font-family: 'poppins', sans-serif;
+    justify-content: center;
+    display: flex;
+    text-align: center;
+    margin: 20px auto;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.borrar {
+    background-color: #b95;
+    border-radius: 5px;
+    border: 2px solid #b95;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    font-family: 'poppins', sans-serif;
+    font-weight: bold;
+    justify-content: center;
+    width: 100px;
+    height: 30px;
+    font-size: 20px;
+}
+
+body {
+    background-color: rgb(31, 30, 30);
+}
