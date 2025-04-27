@@ -1,43 +1,47 @@
-const formulario = document.getElementById("formulario")
+const btnEnviar = document.getElementById("enviar");
 
-formulario.addEventListener("submit", function (e) {
+function revisarFormulario(e){
     e.preventDefault();
 
-    document.getElementById("errorNombre").textContent = "";
-    document.getElementById("errorEmail").textContent = "";
-    document.getElementById("errorEdad").textContent = "";    
+    const nombre = document.getElementById("nombre").value;
+    const email = document.getElementById("email").value;
+    const edad = document.getElementById("edad").value;
 
-    const nombre = document.getElementById("nombre").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const edad = document.getElementById("edad").value.trim();
+    const errorNombre = document.getElementById("errorNombre");
+    const errorEmail = document.getElementById("errorEmail");
+    const errorEdad = document.getElementById("errorEdad");
+
+    errorNombre.textContent = "";
+    errorEmail.textContent = "";
+    errorEdad.textContent = "";    
 
     let HayErrores = false;
 
     if (nombre === ""){
-        document.getElementById("errorNombre").textContent = "El nombre es obligatorio."
+        errorNombre.textContent = "El nombre es obligatorio."
         HayErrores = true;
     }
     
-    const emailValido = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
+    const emailValido = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     if (email === ""){
-        document.getElementById("errorEmail").textContent = "El email es obligatorio."
+        errorEmail.textContent = "El email es obligatorio."
         HayErrores = true;
     }
     else if (!emailValido.test(email)) {
-        document.getElementById("errorEmail").textContent = "El email no es valido."
+        errorEmail.textContent = "El email no es valido."
         HayErrores = true;
     }
 
     if (edad === ""){
-        document.getElementById("errorEdad").textContent = "La edad es obligatoria."
+        errorEdad.textContent = "La edad es obligatoria."
         HayErrores = true;
     }
     else if (isNaN(edad)){
-        document.getElementById("errorEdad").textContent = "La edad tiene que ser un numero."
+        errorEdad.textContent = "La edad tiene que ser un numero."
         HayErrores = true;
     }
     else if (edad < 18){
-        document.getElementById("errorEdad").textContent = "Tenes que ser mayor de 18 años."
+        errorEdad.textContent = "Tenes que ser mayor de 18 años."
         HayErrores = true;
     }
 
@@ -46,4 +50,5 @@ formulario.addEventListener("submit", function (e) {
         alert("Formulario valido. Very gud 👍🏻")
     }
 }
-)
+
+btnEnviar.addEventListener("click", revisarFormulario)

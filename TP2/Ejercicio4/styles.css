@@ -28,3 +28,7 @@ button {
     color: #c64715; 
     cursor: pointer;
 }
+
+.lista ul li {
+    cursor: pointer;
+}
