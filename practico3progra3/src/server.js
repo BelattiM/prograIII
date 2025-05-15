@@ -1,7 +1,7 @@
 const  express = require('express');
 const  dotenv = require('dotenv');
 const rutaPacientes = require('./routes/pacientes.route.js')
-const rutaTurnos = require('./routes/turnos.route.js.js') // agregado para rutas de los turnos
+const rutaTurnos = require('./routes/turnos.route.js') // agregado para rutas de los turnos
 const home = require('./routes/home.routes.js');
 const morgan = require('morgan');
 dotenv.config()
