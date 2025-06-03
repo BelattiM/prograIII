@@ -1,0 +1,35 @@
+.contenedorRegTurno{
+    margin-top: 5%;
+    width: 80%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+}
+.contenedorRegTurno form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 35%;
+    align-items: center;
+}
+.contenedorRegTurno form div{
+    width: 100%;
+    font-family: Orbitron;
+    font-weight: 600;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+.contenedorRegTurno form input{
+    position: absolute;
+    right: 0;
+    width: 50%;
+    border:3px solid #0bb;
+}
+.contenedorRegTurno form input[type="number"]::-webkit-outer-spin-button,
+.contenedorRegTurno form input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
