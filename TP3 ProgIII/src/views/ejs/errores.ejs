@@ -1,0 +1,17 @@
+<%- include('partials/head')%>
+<body>
+    <%- include('partials/header')%>
+    <main>
+        <div class="contenedorEndpoint">
+            <h2> Errores: </h2>
+            <% errores.forEach(function(e) { %>
+                <h3 class="msgError1"> <%= e %> </h3>
+            <% }); %>
+            <button class="btnHome" onclick="window.location.href='/'">Volver al Home</button>
+        </div>
+    </main>
+
+    <%- include('partials/footer')%>
+
+</body>
+</html>
