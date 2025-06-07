@@ -1,0 +1,17 @@
+<%- include('partials/head')%>
+<body>
+    <%- include('partials/header')%>
+    <main>
+        <div class="contenedorEndpoint">
+            <h2>Paciente creado correctamente</h2>
+            <span> DNI: <%= paciente.dni %> </span>
+            <span> Nombre: <%= paciente.nombre %> <%= paciente.apellido %> </span>
+            <span> Email: <%= paciente.email %> </span>
+            <button class="btnHome" onclick="window.location.href='/'">Volver al Home</button>
+        </div>
+    </main>
+
+    <%- include('partials/footer')%>
+
+</body>
+</html>

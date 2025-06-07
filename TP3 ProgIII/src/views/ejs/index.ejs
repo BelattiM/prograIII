@@ -1,0 +1,217 @@
+<%- include('partials/head')%>
+<body>
+    <%- include('partials/header')%>
+    <main>
+        <div class="container_botones">
+            <button id="verPacie" data-modal="modalVerPacie">Ver todos los pacientes</button>
+            <button id="regPacie" data-modal="modalRegPacie">Registrar paciente</button>
+            <button id="delPacie" data-modal="modalDelPacie">Dar de baja paciente</button>
+            <div class="separador"></div>
+            <button id="regTurn" data-modal="modalRegTurn">Registrar turno</button>
+            <button id="verTurn" data-modal="modalVerTurn">Consultar/eliminar turnos de un paciente</button>
+            <button id="verTodosTurn" data-modal="modalVerTodosTurn">Ver todos los turnos</button>
+        </div>
+    </main>
+
+    <%- include('partials/footer')%>
+
+    <div id ="modalVerPacie" class="backgroundModal">
+        <div class="modal">
+            <img class="cerrarModal" src="/img/close.png" alt="iconoCerrar">
+            <h2 class="tituloModal">Pacientes</h2>
+            <div class="separadorModal"></div>
+            <% if (pacientesData.length !== 0) { %>
+                <div class="contenedorVerPacientes">
+                    <% pacientesData.forEach(function(p) { %>
+                        <div class="divPaciente">
+                            <div><span>Nombre: </span><%=p.nombre%> <%=p.apellido%> </div>
+                            <div><span>DNI: </span><%=p.dni%></div>
+                            <div><span>Email: </span><%=p.email%></div>
+                        </div>
+                    <% }); %>
+                </div>
+            <% } else { %>
+                <p class="msgError1">No hay pacientes registrados.</p>
+            <% } %>
+        </div>
+    </div>
+    <div id ="modalRegPacie" class="backgroundModal">
+        <div class="modal">
+            <img class="cerrarModal" src="/img/close.png" alt="iconoCerrar">
+            <h2 class="tituloModal">Registrar paciente</h2>
+            <div class="separadorModal"></div>
+            <div class="contenedorRegPaciente">
+                <form action="/pacienteCreado" method="POST">
+                    <div>
+                    <label>DNI:</label>
+                    <input type="number" name="dni" required></div>
+                    <div>
+                    <label>Nombre:</label>
+                    <input type="text" name="nombre" required></div>
+                    <div>
+                    <label>Apellido:</label>
+                    <input type="text" name="apellido" required></div>
+                    <div>
+                    <label>Email:</label>
+                    <input type="email" name="email" required></div>
+                    <div>
+                    <label>Contraseña:</label>
+                    <input type="password" name="password" required></div>
+
+                    <button class="botonModal" type="submit">Guardar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id ="modalDelPacie" class="backgroundModal">
+        <div class="modal">
+            <img class="cerrarModal" src="/img/close.png" alt="iconoCerrar">
+            <h2 class="tituloModal">Dar de baja paciente</h2>
+            <div class="separadorModal"></div>
+            <div class="contenedorDelPaciente">
+                <form id="formEliminarPaciente">
+                    <div>
+                        <label for="id_paciente">ID: </label>
+                        <input id="id_pacienteEliminar" type="number" name="id_paciente">
+                    </div>
+                    <button class="botonModal" type="submit">Dar de baja</button>
+                </form>
+                <div class="contVerInfoPacientes">
+                    <% if (pacientesData.length !== 0) { %>
+                        <% pacientesData.forEach(function(p) { %>
+                            <div>
+                                <span>ID: <%=p.id%>,</span>
+                                <span>Paciente: <%=p.nombre%> <%=p.apellido%></span>
+                            </div>
+                        <% }); %>
+                    <% } else { %>
+                        <p class="msgError2">No hay pacientes registrados.</p>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id ="modalVerTurn" class="backgroundModal">
+        <div class="modal">
+            <img class="cerrarModal" src="/img/close.png" alt="iconoCerrar">
+            <h2 class="tituloModal">Buscar turno/s de un paciente</h2>
+            <div class="separadorModal"></div>
+            <div class="contenedorVerTurnoPaciente"> 
+                <form id="formBuscarTurnos">
+                    <div>
+                        <label for="id_paciente">ID: </label>
+                        <input id="id_pacienteBuscarTurn" type="number" name="id_paciente">
+                    </div>
+                    <button class="botonModal" type="submit">Buscar</button>
+                </form>
+                <div class="contVerInfoPacientes">
+                    <% if (pacientesData.length !== 0) { %>
+                        <% pacientesData.forEach(function(p) { %>
+                            <div>
+                                <span>ID: <%=p.id%>,</span>
+                                <span>Paciente: <%=p.nombre%> <%=p.apellido%></span>
+                            </div>
+                        <% }); %>
+                    <% } else { %>
+                        <p class="msgError2">No hay pacientes registrados.</p>
+                    <% } %>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div id ="modalRegTurn" class="backgroundModal">
+        <div class="modal">
+            <img class="cerrarModal" src="/img/close.png" alt="iconoCerrar">
+            <h2 class="tituloModal">Registrar turno</h2>
+            <div class="separadorModal"></div>
+            <div class="contenedorRegTurno">
+                <form action="/turnoCreado" method="POST">
+                    <div>
+                    <label>ID del paciente:</label>
+                    <input type="number" name="id_paciente" required></div>
+                    <div>
+                    <label>Fecha:</label>
+                    <input type="text" name="fecha" required pattern="\d{2}-\d{2}-\d{4}" placeholder="DD-MM-YYYY" required></div>
+                    <div>
+                    <label>Hora:</label>
+                    <input type="text" name="hora" required pattern="\d{2}:\d{2}" placeholder="HH:MM" required></div>
+                    <input style="display: none;" type="text" name="estado" value="pendiente">
+                    <button class="botonModal" type="submit">Guardar</button>
+                </form>
+                <div class="contVerInfoPacientes">
+                    <% if (pacientesData.length !== 0) { %>
+                        <% pacientesData.forEach(function(p) { %>
+                            <div id="paciente-<%= p.id %>">
+                                <span>ID: <%=p.id%>,</span>
+                                <span>Paciente: <%=p.nombre%> <%=p.apellido%></span>
+                            </div>
+                        <% }); %>
+                    <% } else { %>
+                        <p class="msgError2">No hay pacientes registrados.</p>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id ="modalVerTodosTurn" class="backgroundModal">
+        <div class="modal">
+            <img class="cerrarModal" src="/img/close.png" alt="iconoCerrar">
+            <h2 class="tituloModal">Turnos</h2>
+            <div class="separadorModal"></div>
+            <% if (turnosData.length !== 0) { %>
+                <div class="contenedorVerTodosTurnos"> 
+                <% turnosData.forEach(function(t) {
+                    const paciente = pacientesData.find(p => p.id === t.id_paciente); %>
+                    <div class="divTurno">
+                        <div><span>Paciente:</span> <%=paciente.nombre%> <%=paciente.apellido%> </div>
+                        <div><span>Estado:</span> <%=t.estado%> </div>
+                        <div><span>Fecha:</span> <%=t.fecha%> </div>
+                        <div><span>Hora:</span> <%=t.hora%> </div> 
+                    </div>
+                <% }); %>
+                </div>
+            <% } else { %>
+                <p class="msgError1">No hay turnos registrados.</p>
+            <% } %>
+        </div>
+    </div>
+
+    <script>
+        const botonesAbrir = document.querySelectorAll("button");
+        botonesAbrir.forEach(boton => {
+            boton.onclick = () => {
+                const id = boton.dataset.modal;
+                document.getElementById(id).style.display = 'flex';
+            };
+        });
+        const botonesCerrar = document.querySelectorAll('.cerrarModal');
+            botonesCerrar.forEach(boton => {
+                boton.onclick = () => {
+                boton.closest('.backgroundModal').style.display = 'none';
+                };
+            });
+        window.onclick = (e) => {
+            if (e.target.classList.contains('backgroundModal')) {
+            e.target.style.display = 'none';
+            }
+        };
+        document.getElementById('formBuscarTurnos').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const id_paciente = document.getElementById('id_pacienteBuscarTurn').value;
+            if (id_paciente) {
+                window.location.href = `turnosPaciente/${id_paciente}`;
+            }
+        });
+        document.getElementById('formEliminarPaciente').addEventListener('submit', async function(e){
+            e.preventDefault();
+            const id_paciente = document.getElementById('id_pacienteEliminar').value;
+            const respuesta = await fetch(`/eliminarPaciente/${id_paciente}`, {
+                method: 'DELETE',
+            });
+            const datos = await respuesta.json();
+            window.location.href = datos.redireccion
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+.contenedorVerTurnoPaciente{
+    width: 80%;
+    height: 60%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 5%;
+    margin-top: 5%;
+
+}
+.contenedorVerTurnoPaciente form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 35%;
+    align-items: center;
+}
+.contenedorVerTurnoPaciente form div{
+    width: 50%;
+    font-family: Orbitron;
+    font-weight: 600;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+.contenedorVerTurnoPaciente form input{
+    position: absolute;
+    right: 0;
+    width: 80%;
+    border:3px solid #0bb;
+}
+.contenedorVerTurnoPaciente form input[type="number"]::-webkit-outer-spin-button,
+.contenedorVerTurnoPaciente form input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}

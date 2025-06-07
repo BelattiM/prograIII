@@ -1,0 +1,25 @@
+.contenedorVerPacientes{
+    display: grid;
+    width: 90%;
+    grid-template-columns: repeat(3, 33%);
+    gap: 10px;
+    margin: 15px 0;
+}
+.divPaciente{
+    display: flex;
+    flex-direction: column;
+    border: 5px solid #0bb;
+    padding: 10px;
+    gap: 10px;
+    font-family: Orbitron;
+    font-weight: 600;
+    background-color: #eee;
+}
+.divPaciente span{
+    color: #0bb
+}
+.divPaciente div{
+    max-width:100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}

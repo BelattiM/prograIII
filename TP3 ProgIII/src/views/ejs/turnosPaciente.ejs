@@ -1,0 +1,43 @@
+<%- include('partials/head')%>
+<body>
+    <%- include('partials/header')%>
+    <main>
+        <div class="contenedorTurnosPaciente">
+            <h2>Turnos del paciente</h2>
+                <% if (turnos.length !== 0) { %>
+                    <div class="subcontenedorTurnosPaciente">
+                        <% turnos.forEach(function(t) { %>
+                            <div>
+                                <span>ID del turno: <%=t.id_turno%>,</span>
+                                <span>Estado: <%=t.estado%></span>
+                                <span>Fecha: <%=t.fecha%></span>
+                                <span>Hora: <%=t.hora%></span>
+                                <button class="btnEliminarTurno" data-idturno="<%= t.id_turno%>">Eliminar turno</button>
+                            </div>
+                        <% }); %>
+                    </div>
+                <% } else { %>
+                    <p class="msgError2">No hay turnos registrados.</p>
+                <% } %>
+
+            <button class="btnHome" onclick="window.location.href='/'">Volver al Home</button>
+        </div>
+    </main>
+
+    <%- include('partials/footer')%>
+    <script>
+        const botonesEliminar = document.querySelectorAll('.btnEliminarTurno');
+        botonesEliminar.forEach(boton => {
+            boton.onclick = async () => {
+                const idTurno = boton.dataset.idturno;
+                const respuesta = await fetch(`eliminarTurno/${idTurno}`, {
+                    method: 'DELETE',
+                });
+                const datos = await respuesta.json();
+                window.location.href = datos.redireccion
+            };
+        });
+    </script>
+</body>
+
+</html>
