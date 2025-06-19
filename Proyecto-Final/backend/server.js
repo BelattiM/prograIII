@@ -4,8 +4,8 @@ const helmet = require('helmet');
 const morgan = require('morgan');
 require('dotenv').config();
 
-const { sequelize } = require('./models');
-const routes = require('./routes');
+const { sequelize } = require('./models/index.js');
+const routes = require('./routes/index.js');
 
 const app = express();
 const PORT = process.env.PORT || 3001;

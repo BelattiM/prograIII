@@ -19,9 +19,9 @@ const sequelize = new Sequelize(
   }
 );
 
-const {Usuario} = require('./usuario.model.js')
-const {Juego} = require('./juego.model.js')
-const {JuegoUsuario} = require('./juegoUsuario.model.js')
+const Usuario = require('./usuario.model.js')(sequelize)
+const Juego = require('./juego.model.js')(sequelize)
+const JuegoUsuario = require('./juegoUsuario.model.js')(sequelize)
 
 Usuario.belongsToMany(Juego, {
   through: JuegoUsuario,
