@@ -5,7 +5,7 @@ const morgan = require('morgan');
 require('dotenv').config();
 
 const { sequelize } = require('./models/index.js');
-const routes = require('./routes/index.js');
+const routes = require('./routes');
 
 const app = express();
 const PORT = process.env.PORT || 3001;

@@ -24,8 +24,8 @@ class UsuariosController {
         if (!UsuarioBorrar){
             return res.status(404).json({mensaje: `No se encontro un usuario con id ${id}`});
         }
-        const borrado = await UsuarioBorrar.destroy();
-        res.status(200).json({mensaje: "Usuario eliminado", borrado});
+        await UsuarioBorrar.destroy();
+        res.status(200).json({mensaje: "Usuario eliminado", registroEliminado: UsuarioBorrar});
     }
     async actualizar(req, res){
         try{

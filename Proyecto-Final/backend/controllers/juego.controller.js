@@ -24,8 +24,8 @@ class JuegosController {
         if (!juegoBorrar){
             return res.status(404).json({mensaje: `No se encontro un juego con id ${id}`});
         }
-        const borrado = await juegoBorrar.destroy();
-        res.status(200).json({mensaje: "Juego eliminado", borrado});
+        await juegoBorrar.destroy();
+        res.status(200).json({mensaje: "Juego eliminado", registroEliminado: juegoBorrar});
     }
     async actualizar(req, res){
         try{
@@ -50,4 +50,6 @@ class JuegosController {
         }
         res.status(200).json({message:"Juego encontrado", encontrado});
     }
-}
+};
+
+module.exports = new JuegosController();

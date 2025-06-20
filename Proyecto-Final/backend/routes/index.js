@@ -1,5 +1,5 @@
-const express = require('express');
-const router = express.Router();
+const {Router} = require('express');
+const router = Router();
 
 // Ruta de prueba
 router.get('/health', (req, res) => {
@@ -22,5 +22,13 @@ router.get('/test', (req, res) => {
     }
   });
 });
+
+const rutaJuegos = require('./juego.routes.js');
+const rutaUsuarios = require('./usuario.routes.js');
+const rutaJuegoUsuario = require('./juegoUsuario.routes.js');
+
+router.use('/juegos', rutaJuegos);
+router.use('/usuarios', rutaUsuarios);
+router.use('/juegos-usuarios', rutaJuegoUsuario);
 
 module.exports = router;
