@@ -583,3 +583,9 @@ docker system prune -a --volumes
 - **Reddit** r/docker, r/reactjs, r/node
 
 ¡Sistema completo y listo para desarrollo! 🚀
+
+---
+
+## 🛠️ Coleccion de rutas de la API (postman) para testeo
+
+https://web.postman.co/workspace/My-Workspace~3250703a-afad-441d-894a-a6c7a792360b/collection/39908437-706d200f-783c-4393-93e0-d52596aafcbe?action=share&source=copy-link&creator=39908437

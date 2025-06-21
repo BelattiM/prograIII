@@ -6,7 +6,7 @@ rutaJuegoUsuario.get('/', juegoUsuarioController.listar)
 rutaJuegoUsuario.get('/juego/:juego_id', juegoUsuarioController.getByIdJuego)
 rutaJuegoUsuario.get('/usuario/:usuario_id', juegoUsuarioController.getByIdUsuario)
 rutaJuegoUsuario.post('/', juegoUsuarioController.crear)
-rutaJuegoUsuario.delete('/:id', juegoUsuarioController.borrar)
-rutaJuegoUsuario.put('/:id', juegoUsuarioController.actualizar)
+rutaJuegoUsuario.delete('/:usuario_id/:juego_id', juegoUsuarioController.borrar)
+rutaJuegoUsuario.put('/:usuario_id/:juego_id', juegoUsuarioController.actualizar)
 
 module.exports = rutaJuegoUsuario;

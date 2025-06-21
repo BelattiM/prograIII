@@ -35,7 +35,6 @@ class JuegoUsuariosController {
     async actualizar(req, res){
         try{
             const { usuario_id, juego_id } = req.params;
-
             const gameUserActualizar = await JuegoUsuario.findOne({
                 where: {
                     usuario_id: usuario_id,

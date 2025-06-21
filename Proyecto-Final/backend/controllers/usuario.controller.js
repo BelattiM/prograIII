@@ -34,8 +34,8 @@ class UsuariosController {
             if (!UsuarioActualizar){
                 return res.status(404).json({mensaje: `No se encontro un Usuario con id ${id}`});
             }
-            const {titulo, plataforma, genero} = req.body;
-            const actualizado = await UsuarioActualizar.update({titulo, plataforma, genero})
+            const {username, email, password} = req.body;
+            const actualizado = await UsuarioActualizar.update({username, email, password})
             res.status(200).json({message:"Usuario actualizado", actualizado});
         } 
         catch (error){
