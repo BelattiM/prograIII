@@ -20,6 +20,10 @@ module.exports = (sequelize) => {
         password: { 
             type: DataTypes.STRING, 
             allowNull: false 
+        },
+        rol: {
+            type: DataTypes.ENUM('admin', 'usuario'),
+            allowNull: false
         }
     });
 

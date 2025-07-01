@@ -64,13 +64,13 @@ async function startServer() {
     // En desarrollo, sincronizar modelos
     if (process.env.NODE_ENV === 'development') {
       await sequelize.sync({ alter: false });
-      console.log('✅ Database synchronized');
+      console.log('✅ Database sincronizada');
     }
     
     app.listen(PORT, () => {
-      console.log(`🚀 Server is running on port ${PORT}`);
+      console.log(`🚀 Server corriendo en el puerto ${PORT}`);
       console.log(`📝 Environment: ${process.env.NODE_ENV || 'development'}`);
-      console.log(`🔗 API available at: http://localhost:${PORT}/api`);
+      console.log(`🔗 API disponible en: http://localhost:${PORT}/api`);
     });
   } catch (error) {
     console.error('❌ Unable to start server:', error);

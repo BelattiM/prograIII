@@ -1,0 +1,23 @@
+.Footer{
+    align-self: end;
+    height: 10%;
+    background-color: #000;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+}
+.Footer span{
+    color: #ddd;
+}
+.Footer span:hover{
+    color: #eee;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.Footer span:active{
+    color: #ccc;
+    text-decoration: underline;
+    cursor: pointer;
+}

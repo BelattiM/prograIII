@@ -2,6 +2,7 @@ const {Router} = require('express');
 const rutaUsuarios = Router();
 const usuarioController = require('./../controllers/usuario.controller');
 
+rutaUsuarios.post('/login', usuarioController.login)
 rutaUsuarios.get('/', usuarioController.listar)
 rutaUsuarios.get('/:id', usuarioController.getById)
 rutaUsuarios.post('/', usuarioController.crear)

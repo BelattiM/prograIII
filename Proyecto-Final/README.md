@@ -343,6 +343,9 @@ npx sequelize-cli db:seed:all
 # Ver estado de migraciones
 npx sequelize-cli db:migrate:status
 
+# Resetear los datos con las migraciones
+npx sequelize-cli db:migrate:undo:all && npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all
+
 # Salir del contenedor
 exit
 ```

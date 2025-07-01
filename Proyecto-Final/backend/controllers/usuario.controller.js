@@ -1,10 +1,28 @@
 const {Usuario} = require('./../models/index.js')
+const {loginJWT} = require('./auth.controller.js')
+const bcrypt = require('bcryptjs')
 
 class UsuariosController {
+    async login(req, res){
+        const {email, password} = req.body;
+        try{
+            const token = await loginJWT(email, password);
+            if (token) {
+                res.status(200).json({token})
+            }else{
+                res.status(400).json({message: "Credenciales invalidas"})
+            }
+        } catch(error) {
+            res.status(500).json({message: error.message})
+        }
+    } 
+
     async crear(req, res) {
         try{
             const {username, email, password} = req.body;
-            const userNuevo = await Usuario.create({username, email, password});
+            const hashedPassword = await bcrypt.hash(password, 10)
+
+            const userNuevo = await Usuario.create({username, email, password: hashedPassword});
             res.status(200).json({mensaje: "Usuario creado correctamente.", userNuevo})
         }
         catch (error){
