@@ -1,0 +1,84 @@
+.ListaJuegosDestacados{
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    color: #fff;
+    width: 90%;
+}
+.ListaJuegosDestacados h2{
+    align-self: flex-start;
+    padding-left: 15px;
+}
+.contenedorJuegos{
+    margin-top: 15px;
+    max-width: 100%;
+    min-width: 90%;
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    gap: 5%;
+}
+.contenedorScroll{
+    display: flex;
+    flex-direction: row;
+}
+.flecha {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    z-index: 1;
+    padding: 0 1rem;
+    user-select: none;
+}
+
+.flecha:disabled {
+    opacity: 0.3;
+    cursor: default;
+}
+.Juego{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    width: 200px;
+    height: 200px;
+    color: #fff;
+}
+.titulo-juego{
+    z-index: 1;
+}
+.genero-juego{
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    right: 10px;
+    font-size: 12px;
+}
+.imagen-genero {
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: auto;
+    margin-bottom: 0.5rem;
+    filter: brightness(0.4);
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+.imagen-genero:hover{
+    transform: scale(1.1);
+    filter: brightness(0.6);
+}
+.error{
+    color: #fff
+}
+.loading{
+    color: #fff
+}

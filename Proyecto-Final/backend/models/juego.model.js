@@ -17,8 +17,12 @@ module.exports = (sequelize) => {
             allowNull: false
         },
         genero: {
-        type: DataTypes.ENUM('Accion', 'Aventura', 'RPG (Juegos de rol)', 'Estrategia', 'Deportes', 'Plataformas', 'Otro'),
-        allowNull: false
+            type: DataTypes.ENUM('Accion', 'Aventura', 'RPG (Juegos de rol)', 'Estrategia', 'Deportes', 'Plataformas', 'Otro'),
+            allowNull: false
+        },
+        linkwiki: {
+            type:DataTypes.STRING,
+            allowNull: true
         }
     });
 

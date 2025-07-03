@@ -23,6 +23,10 @@ module.exports = {
         type: Sequelize.ENUM('Accion', 'Aventura', 'RPG (Juegos de rol)', 'Estrategia', 'Deportes', 'Plataformas', 'Otro'),
         allowNull: false
       },
+      linkwiki:{
+        type: Sequelize.STRING,
+        allowNull:true
+      },
       createdAt: {
         type: Sequelize.DATE,
         allowNull: false

@@ -1,0 +1,84 @@
+.coloresFalopa{
+    background-color: #0f0f0f;
+    background-color: #00ffff;
+    background-color: #9b5de5;
+    background-color: #ff006e;
+    background-color: #b8f100;
+    background-color: #d3d3d3;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+.HomeNoLogin{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Press Start 2P', monospace;
+    background-color: #002;
+    background-repeat: repeat;
+    background-size: 25%;
+    background-position: top left;
+    justify-content: center;
+    align-items: center;
+}
+.homeOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* oscurece con transparencia */
+    z-index: 0;
+}
+.descripcionPagina{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 60%;
+    width: 90%;
+    background-color: #003;
+    border: 5px solid #004;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 30px 15px 15px 15px;
+    gap: 15%;
+    z-index: 2;
+    overflow: hidden;
+}
+.descripcionPagina img{
+    position: absolute;
+    top: 0;
+    left: 50;
+    width: 100%;
+    z-index: 1;
+    filter: brightness(0.2);
+}
+.descripcionPagina span{
+    z-index: 2;
+    color: #ddd;
+    font-size: 20px;
+}
+
+.descripcionPagina button {
+    height: 40px;
+    width: 15%;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 14px;
+    color: #ffff00;
+    background-color: #000;
+    border: 4px solid #ffff00;
+    border-radius: 10px;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 0 0 10px #ffff00;
+    transition: all 0.2s ease;
+    z-index: 2;
+    margin: 30px 15px 15px 15px
+}
+
+.descripcionPagina button:hover {
+    background-color: #ffff00;
+    color: #000;
+    box-shadow: 0 0 20px #ffff00;
+}

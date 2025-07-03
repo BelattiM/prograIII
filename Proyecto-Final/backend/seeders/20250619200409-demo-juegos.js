@@ -8,6 +8,7 @@ module.exports = {
         titulo: 'Dead Cells',
         plataforma: 'PC',
         genero: 'Aventura',
+        linkwiki: null,
         createdAt: new Date(),
         updatedAt: new Date()
       },
@@ -15,6 +16,7 @@ module.exports = {
         titulo: 'Balatro',
         plataforma: 'PC',
         genero: 'Estrategia',
+        linkwiki: null,
         createdAt: new Date(),
         updatedAt: new Date()
       },
@@ -22,6 +24,7 @@ module.exports = {
         titulo: 'Devil May Cry 5',
         plataforma: 'PlayStation',
         genero: 'Accion',
+        linkwiki: null,
         createdAt: new Date(),
         updatedAt: new Date()
       },
@@ -29,6 +32,7 @@ module.exports = {
         titulo: 'Rocket League',
         plataforma: 'PC',
         genero: 'Deportes',
+        linkwiki: null,
         createdAt: new Date(),
         updatedAt: new Date()
       },
@@ -36,6 +40,7 @@ module.exports = {
         titulo: 'The Sims 4',
         plataforma: 'XBOX',
         genero: 'Otro',
+        linkwiki: null,
         createdAt: new Date(),
         updatedAt: new Date()
       }
