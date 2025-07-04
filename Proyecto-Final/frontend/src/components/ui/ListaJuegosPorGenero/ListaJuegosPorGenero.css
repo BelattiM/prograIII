@@ -22,9 +22,8 @@
     gap: 5%;
 }
 .flecha {
-    background: none;
     border: none;
-    font-size: 2rem;
+    font-size: 40px;
     color: white;
     cursor: pointer;
     z-index: 1;
@@ -37,37 +36,33 @@
     cursor: default;
 }
 .card-genero {
-    min-width: 200px;
+    position: relative;
+    width: 200px;
     height: 200px;
     background-color: #222;
     border-radius: 10px;
     overflow: hidden;
-    position: relative;
     margin: 0 10px;
-    color: white;
+    color: #fff;
     text-align: center;
     cursor: pointer;
     transition: transform 0.3s ease;
     flex-shrink: 0;
 }
-
 .card-genero:hover {
     transform: scale(1.05);
 }
-
 .card-genero img {
     z-index: 1;
     width: 200px;
     height:200px;
     object-fit: cover;
-    filter: brightness(0.6);
+    filter: brightness(0.4);
     transition: filter 0.3s ease;
 }
-
 .card-genero:hover img {
-    filter: brightness(0.4);
+    filter: brightness(0.6);
 }
-
 .titulo-genero{
     position: absolute;
     top: 50%;

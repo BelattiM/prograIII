@@ -1,5 +1,5 @@
 import './HomeNoLogin.css'
-import FondoDescripcion from './../../assets/images/Fondo1.png'
+import FondoDescripcion from './../../assets/images/FondoDescripcion.png'
 import FondoHome from './../../assets/images/FondoHome.png'
 import ListaJuegosDestacados from '../../components/ui/ListaJuegosDestacados/ListaJuegosDestacados';
 import ListaJuegosPorGenero from '../../components/ui/ListaJuegosPorGenero/ListaJuegosPorGenero';
@@ -10,6 +10,7 @@ const style = {
 };
 
 function HomeNoLogin(){
+    
     return(
         <div className='HomeNoLogin' style={style}>
             <div className='homeOverlay'></div>
@@ -20,8 +21,8 @@ function HomeNoLogin(){
                     Registrate
                 </button>
             </div>
-            <ListaJuegosDestacados/>
             <ListaJuegosPorGenero/>
+            <ListaJuegosDestacados/>
         </div>
     );
 }

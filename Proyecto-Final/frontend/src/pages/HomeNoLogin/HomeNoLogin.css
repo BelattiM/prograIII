@@ -10,6 +10,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 .HomeNoLogin{
+    position: relative;
     display: flex;
     flex-direction: column;
     font-family: 'Press Start 2P', monospace;

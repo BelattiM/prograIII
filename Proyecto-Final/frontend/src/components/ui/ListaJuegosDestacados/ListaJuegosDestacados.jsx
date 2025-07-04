@@ -58,13 +58,13 @@ function ListaJuegosDestacados(){
         <div className='ListaJuegosDestacados'>
             <h2>Juegos Destacados</h2>
             <div className='contenedorScroll'>
-                <button className="flecha izquierda" onClick={handleScrollIzquierda}>←</button>
+                <button className="flecha izquierda" onClick={handleScrollIzquierda}>◄</button>
                 <div className='contenedorJuegos' ref={scrollRef}>
                     {juegos.map(juego => {
                         const imagen = imagenesGenero[juego.genero] || imgOtro;
 
                         return (
-                            <div key={juego.id} className="Juego">
+                            <div key={juego.id} className="card-juego">
                                 <img src={imagen} alt={juego.genero} className="imagen-genero" />
                                 <p className='titulo-juego'>{juego.titulo}</p>
                                 <p className='genero-juego'>{juego.genero}</p>
@@ -72,7 +72,7 @@ function ListaJuegosDestacados(){
                         );
                     })}
                 </div>
-                <button className="flecha derecha" onClick={handleScrollDerecha}>→</button>
+                <button className="flecha derecha" onClick={handleScrollDerecha}>►</button>
             </div>
         </div>
     );

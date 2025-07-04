@@ -34,7 +34,7 @@ function ListaJuegosPorGenero(){
         <div className='ListaJuegosPorGenero'>
             <h2>Explora por Categoria</h2>
             <div className='contenedorScroll'>
-                <button className="flecha izquierda" onClick={handleScrollIzquierda}>←</button>
+                <button className="flecha izquierda" onClick={handleScrollIzquierda}>◄</button>
                 <div className='contenedorGenero' ref={scrollRef}>
                     {Object.entries(imagenesGenero).map(([genero, imagen]) => (
                         <div key={genero} className="card-genero">
@@ -43,7 +43,7 @@ function ListaJuegosPorGenero(){
                         </div>
                     ))}
                 </div>
-                <button className="flecha derecha" onClick={handleScrollDerecha}>→</button>
+                <button className="flecha derecha" onClick={handleScrollDerecha}>►</button>
             </div>
         </div>
     );

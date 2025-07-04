@@ -40,16 +40,20 @@
     opacity: 0.3;
     cursor: default;
 }
-.Juego{
+.card-juego{
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+    border-radius: 10px;
     flex-shrink: 0;
     width: 200px;
     height: 200px;
+    margin: 0 10px;
     color: #fff;
+    transition: transform 0.3s ease;
 }
 .titulo-juego{
     z-index: 1;
@@ -57,7 +61,7 @@
 .genero-juego{
     position: absolute;
     z-index: 1;
-    bottom: 0;
+    bottom: 10px;
     right: 10px;
     font-size: 12px;
 }
@@ -72,8 +76,10 @@
     filter: brightness(0.4);
     transition: transform 0.3s ease, filter 0.3s ease;
 }
-.imagen-genero:hover{
+.card-juego:hover{
     transform: scale(1.1);
+}
+.card-juego:hover img{
     filter: brightness(0.6);
 }
 .error{

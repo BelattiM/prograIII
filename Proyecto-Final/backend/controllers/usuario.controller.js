@@ -6,9 +6,19 @@ class UsuariosController {
     async login(req, res){
         const {email, password} = req.body;
         try{
+            const usuario = await Usuario.findOne({ where: {email}})
+            if (!usuario) {
+                return res.status(401).json({ mensaje: 'Email incorrecto' });
+            }
+
+            const passwordValida = await bcrypt.compare(password, usuario.password);
+            if (!passwordValida) {
+                return res.status(401).json({ mensaje: 'Contraseña incorrecta' });
+            }
+
             const token = await loginJWT(email, password);
             if (token) {
-                res.status(200).json({token})
+                res.status(200).json({usuario, token})
             }else{
                 res.status(400).json({message: "Credenciales invalidas"})
             }
