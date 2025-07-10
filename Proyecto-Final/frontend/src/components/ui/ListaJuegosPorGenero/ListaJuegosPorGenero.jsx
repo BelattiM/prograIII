@@ -1,5 +1,5 @@
-import './ListaJuegosPorGenero.css'
-import React, { useState, useEffect, useRef } from 'react';
+import './../../../index.css'
+import React, { useRef } from 'react';
 import imgAccion from './../../../assets/images/GenerosJuegos/juegoAccion.png'
 import imgAventura from './../../../assets/images/GenerosJuegos/juegoAventura.png'
 import imgDeportes from './../../../assets/images/GenerosJuegos/juegoDeportes.png'
@@ -31,11 +31,11 @@ function ListaJuegosPorGenero(){
     };
 
     return (
-        <div className='ListaJuegosPorGenero'>
+        <div className='ListaJuegos'>
             <h2>Explora por Categoria</h2>
             <div className='contenedorScroll'>
                 <button className="flecha izquierda" onClick={handleScrollIzquierda}>◄</button>
-                <div className='contenedorGenero' ref={scrollRef}>
+                <div className='contenedorLista' ref={scrollRef}>
                     {Object.entries(imagenesGenero).map(([genero, imagen]) => (
                         <div key={genero} className="card-genero">
                             <img src={imagen} alt={genero} className="imagen-genero" />

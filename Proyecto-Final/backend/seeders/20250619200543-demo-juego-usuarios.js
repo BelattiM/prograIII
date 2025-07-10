@@ -5,7 +5,7 @@ module.exports = {
   async up (queryInterface, Sequelize) {
     await queryInterface.bulkInsert('JuegoUsuarios', [
       {
-        usuario_id: 1,
+        usuario_id: 2,
         juego_id: 1,
         estado: 'completado',
         calificacion: 9,
@@ -14,7 +14,7 @@ module.exports = {
         updatedAt: new Date()
       },
       {
-        usuario_id: 2,
+        usuario_id: 3,
         juego_id: 5,
         estado: 'pendiente',
         calificacion: null,
@@ -23,7 +23,7 @@ module.exports = {
         updatedAt: new Date()
       },
       {
-        usuario_id: 3,
+        usuario_id: 4,
         juego_id: 4,
         estado: 'jugando',
         calificacion: 8,
@@ -32,7 +32,7 @@ module.exports = {
         updatedAt: new Date()
       },
       {
-        usuario_id: 4,
+        usuario_id: 5,
         juego_id: 2,
         estado: 'jugando',
         calificacion: 9,
@@ -41,7 +41,7 @@ module.exports = {
         updatedAt: new Date()
       },
       {
-        usuario_id: 1,
+        usuario_id: 2,
         juego_id: 3,
         estado: 'pendiente',
         calificacion: null,
@@ -50,7 +50,7 @@ module.exports = {
         updatedAt: new Date()
       },
       {
-        usuario_id: 4,
+        usuario_id: 5,
         juego_id: 3,
         estado: 'pendiente',
         calificacion: null,

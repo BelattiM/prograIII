@@ -16,7 +16,7 @@ class JuegosController {
         if (!juegos){
             return res.status(404).json({mensaje: "No se encontraron Juegos."});
         }
-        res.status(200).json({mensaje: "Juegos encontrados", juegos});
+        res.status(200).json({juegos});
     }
     async borrar(req, res){
         const id = req.params.id;

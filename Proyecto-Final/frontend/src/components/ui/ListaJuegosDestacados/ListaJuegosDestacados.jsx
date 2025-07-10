@@ -1,5 +1,5 @@
-import './ListaJuegosDestacados.css'
-import React, { useState, useEffect, useRef } from 'react';
+import './../../../index.css'
+import React, { useRef } from 'react';
 import imgAccion from './../../../assets/images/GenerosJuegos/juegoAccion.png'
 import imgAventura from './../../../assets/images/GenerosJuegos/juegoAventura.png'
 import imgDeportes from './../../../assets/images/GenerosJuegos/juegoDeportes.png'
@@ -7,12 +7,10 @@ import imgPlataforma from './../../../assets/images/GenerosJuegos/juegoPlataform
 import imgRPG from './../../../assets/images/GenerosJuegos/juegoRPG.png'
 import imgEstrategia from './../../../assets/images/GenerosJuegos/juegoEstrategia.png'
 import imgOtro from './../../../assets/images/GenerosJuegos/juegoOtro.png'
+import useFetchJuegos from '../../../hooks/fetchJuegos';
 
 function ListaJuegosDestacados(){
-
-    const [juegos, setJuegos] = useState([])
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
+    const { juegos, loading, error } = useFetchJuegos();
     const scrollRef = useRef(null);
 
     const handleScrollIzquierda = () => {
@@ -21,26 +19,6 @@ function ListaJuegosDestacados(){
     const handleScrollDerecha = () => {
         scrollRef.current.scrollBy({ left: 300, behavior: 'smooth' });
     };
-
-    useEffect(()=>{
-        const fetchJuegos = async () =>{ 
-            try {
-                const response = await fetch('http://localhost:3001/api/juegos/');
-
-                if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-                }
-
-                const data = await response.json();
-                setJuegos(data.juegos);
-            } catch (err) {
-                setError(err.message);
-            } finally {
-                setLoading(false);
-            }
-        }
-        fetchJuegos();
-    }, [])
     const imagenesGenero = {
         'Accion': imgAccion,
         'Aventura': imgAventura,
@@ -55,11 +33,11 @@ function ListaJuegosDestacados(){
     if (error) return <div className='error'>Error: {error}</div>;
 
     return (
-        <div className='ListaJuegosDestacados'>
+        <div className='ListaJuegos'>
             <h2>Juegos Destacados</h2>
             <div className='contenedorScroll'>
                 <button className="flecha izquierda" onClick={handleScrollIzquierda}>◄</button>
-                <div className='contenedorJuegos' ref={scrollRef}>
+                <div className='contenedorLista' ref={scrollRef}>
                     {juegos.map(juego => {
                         const imagen = imagenesGenero[juego.genero] || imgOtro;
 

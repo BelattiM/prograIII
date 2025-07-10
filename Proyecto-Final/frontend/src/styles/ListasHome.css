@@ -1,4 +1,5 @@
-.ListaJuegosDestacados{
+/*Estilos Globales de Listas*/
+.ListaJuegos{
     margin: 30px;
     display: flex;
     flex-direction: column;
@@ -6,11 +7,11 @@
     color: #fff;
     width: 90%;
 }
-.ListaJuegosDestacados h2{
+.ListaJuegos h2{
     align-self: flex-start;
     padding-left: 15px;
 }
-.contenedorJuegos{
+.contenedorLista{
     margin-top: 15px;
     max-width: 100%;
     min-width: 90%;
@@ -24,22 +25,77 @@
 .contenedorScroll{
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 .flecha {
+    height: fit-content;
     background: none;
     border: none;
-    font-size: 2rem;
-    color: white;
+    font-size: 40px;
+    color: #ddd;
     cursor: pointer;
     z-index: 1;
     padding: 0 1rem;
     user-select: none;
 }
-
+.flecha:hover{
+    color: #fff;
+    text-shadow: 0 0 10px #fff
+}
+.flecha:active{
+    color: #eee;
+}
 .flecha:disabled {
     opacity: 0.3;
     cursor: default;
 }
+
+/*Lista por genero*/
+.card-genero {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background-color: #222;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 0 10px;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    flex-shrink: 0;
+}
+.card-genero:hover {
+    transform: scale(1.05);
+}
+.card-genero:active {
+    transform: scale(1.1);
+}
+.card-genero img {
+    z-index: 1;
+    width: 200px;
+    height:200px;
+    object-fit: cover;
+    filter: brightness(0.4);
+    transition: filter 0.3s ease;
+}
+.card-genero:hover img {
+    filter: brightness(0.6);
+}
+.titulo-genero{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    color: white;
+    font-weight: bold;
+    text-shadow: 1px 1px 4px black;
+}
+
+/*Lista Juegos Destacados*/
+
+
 .card-juego{
     position: relative;
     display: flex;
@@ -54,6 +110,7 @@
     margin: 0 10px;
     color: #fff;
     transition: transform 0.3s ease;
+    cursor: pointer;
 }
 .titulo-juego{
     z-index: 1;
@@ -71,16 +128,20 @@
     top: 0;
     left: 0;
     width: 200px;
-    height: auto;
+    height: 200px;
     margin-bottom: 0.5rem;
     filter: brightness(0.4);
     transition: transform 0.3s ease, filter 0.3s ease;
+    border-radius: 10px; /* Asegura que la imagen respete los bordes redondeados */
 }
 .card-juego:hover{
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 .card-juego:hover img{
     filter: brightness(0.6);
+}
+.card-juego:active {
+    transform: scale(1.1);
 }
 .error{
     color: #fff

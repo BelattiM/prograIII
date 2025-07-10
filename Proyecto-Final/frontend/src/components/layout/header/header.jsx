@@ -1,7 +1,9 @@
 import './header.css'
 import mainLogo from './../../../assets/icons/MainLogo.jpg'
+import { useNavigate } from 'react-router-dom';
 
-function Header({ onShowLogin, onShowSignin, logueado }){
+function Header({ onShowLogin, onShowSignin, logueado, user, onLogout }){
+    const navigate = useNavigate();
     return (
         <div className='containerHeader'>
             <div className='subContainer1'>
@@ -10,8 +12,8 @@ function Header({ onShowLogin, onShowSignin, logueado }){
             </div>
             {logueado ? 
             <div className='subContainer2'>
-                <span>Mi Colleccion</span>
-                <span>Usuario.nombre</span>
+                <span style={{cursor:'pointer'}} onClick={() => navigate('/')}>{user?.username || 'Usuario'}</span>
+                <span style={{cursor:'pointer'}} onClick={() => { onLogout(); navigate('/'); }}>Cerrar Sesion</span>
             </div> : 
             <div className='subContainer2'>
                 <span onClick={onShowLogin}>Iniciar Sesion</span>

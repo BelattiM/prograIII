@@ -1,27 +1,19 @@
-.coloresFalopa{
-    background-color: #0f0f0f;
-    background-color: #00ffff;
-    background-color: #9b5de5;
-    background-color: #ff006e;
-    background-color: #b8f100;
-    background-color: #d3d3d3;
-}
 
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
-.HomeNoLogin{
+.home-container{
     position: relative;
     display: flex;
     flex-direction: column;
     font-family: 'Press Start 2P', monospace;
-    background-color: #002;
+    background-image: url(./../assets/images/FondoHome.png);
     background-repeat: repeat;
     background-size: 25%;
     background-position: top left;
     justify-content: center;
     align-items: center;
 }
-.homeOverlay {
+.home-overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -30,7 +22,10 @@
     background-color: rgba(0, 0, 0, 0.9); /* oscurece con transparencia */
     z-index: 0;
 }
-.descripcionPagina{
+/*--------------------------------------------------*/
+/* HomeNoLogin */
+/*--------------------------------------------------*/
+.descripcion-pagina{
     position: relative;
     display: flex;
     flex-direction: column;
@@ -46,7 +41,7 @@
     z-index: 2;
     overflow: hidden;
 }
-.descripcionPagina img{
+.descripcion-pagina img{
     position: absolute;
     top: 0;
     left: 50;
@@ -54,13 +49,13 @@
     z-index: 1;
     filter: brightness(0.2);
 }
-.descripcionPagina span{
+.descripcion-pagina span{
     z-index: 2;
     color: #ddd;
     font-size: 20px;
 }
 
-.descripcionPagina button {
+.descripcion-pagina button {
     height: 40px;
     width: 15%;
     font-family: 'Press Start 2P', monospace;
@@ -78,8 +73,38 @@
     margin: 30px 15px 15px 15px
 }
 
-.descripcionPagina button:hover {
+.descripcion-pagina button:hover {
     background-color: #ffff00;
     color: #000;
     box-shadow: 0 0 20px #ffff00;
+}
+
+/*--------------------------------------------------*/
+/* HomeLogueado */
+/*--------------------------------------------------*/
+.boton-coleccion{
+    width: fit-content;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 1rem;
+    color: #00f;
+    background-color: #000;
+    border: 4px solid #00f;
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    box-shadow: 0 0 10px #00f;
+    transition: all 0.2s ease;
+    z-index: 2;
+    margin: 30px 15px 15px 15px;
+    position: relative;
+}
+.boton-coleccion:hover {
+    background-color: #00f;
+    color: #000;
+    box-shadow: 0 0 20px #00f;
+}
+.boton-coleccion:active {
+    background-color: #000;
+    color: #00f;
+    box-shadow: 0 0 10px #00f;
 }
