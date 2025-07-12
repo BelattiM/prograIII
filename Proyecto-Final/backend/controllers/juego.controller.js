@@ -3,8 +3,8 @@ const {Juego} = require('./../models/index.js')
 class JuegosController {
     async crear(req, res) {
         try{
-            const {titulo, plataforma, genero} = req.body;
-            const juegoNuevo = await Juego.create({titulo, plataforma, genero});
+            const {titulo, plataforma, genero, linkwiki} = req.body;
+            const juegoNuevo = await Juego.create({titulo, plataforma, genero, linkwiki});
             res.status(200).json({mensaje: "Juego creado correctamente.", juegoNuevo});
         }
         catch (error){
@@ -34,8 +34,8 @@ class JuegosController {
             if (!juegoActualizar){
                 return res.status(404).json({mensaje: `No se encontro un juego con id ${id}`});
             }
-            const {titulo, plataforma, genero} = req.body;
-            const actualizado = await juegoActualizar.update({titulo, plataforma, genero})
+            const {titulo, plataforma, genero, linkwiki} = req.body;
+            const actualizado = await juegoActualizar.update({titulo, plataforma, genero, linkwiki})
             res.status(200).json({message:"Juego actualizado", actualizado});
         } 
         catch (error){

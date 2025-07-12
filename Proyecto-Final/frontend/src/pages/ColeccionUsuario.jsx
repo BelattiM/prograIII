@@ -1,9 +1,8 @@
 import React from 'react';
-import './../../index.css';
-import useFetchJuegos from '../../hooks/fetchJuegos';
-import useFetchJuegoUsuarioByIdUsuario from '../../hooks/fetchJuegoUsuarioByIdUsuario';
+import useFetchJuegos from '../hooks/fetchJuegos';
+import useFetchJuegoUsuarioByIdUsuario from '../hooks/fetchJuegoUsuarioByIdUsuario';
 import { useRef } from 'react';
-import ScrollListaJuegos from '../../components/ui/ScrollListaJuegos';
+import ScrollListaJuegos from '../components/ui/ScrollListaJuegos';
 
 function ColeccionUsuario(){
     const {juegos, loading, error} = useFetchJuegos();

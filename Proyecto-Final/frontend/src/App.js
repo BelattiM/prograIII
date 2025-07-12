@@ -3,12 +3,13 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Header from './components/layout/header/header.jsx'; 
 import Footer from './components/layout/footer/footer.jsx';
-import HomeNoLogin from './pages/HomeNoLogin/HomeNoLogin.jsx';
+import HomeNoLogin from './pages/HomeNoLogin.jsx';
 import ModalLogin from './components/ui/modales/LogInModal/LogInModal';
 import ModalSignin from './components/ui/modales/SignInModal/SignInModal';
-import HomeLogueado from './pages/HomeLogueado/HomeLogueado.jsx';
-import ColeccionUsuario from './pages/ColeccionUsuario/ColeccionUsuario.jsx';
-
+import HomeLogueado from './pages/HomeLogueado.jsx';
+import ColeccionUsuario from './pages/ColeccionUsuario.jsx';
+import GeneroJuegos from './pages/GeneroJuegos.jsx';
+import VerAllGames from './pages/VerAllGames.jsx';
 
 function App() {
   const [showLogin, setShowLogin] = useState(false);
@@ -38,6 +39,8 @@ function App() {
         <Routes>
           <Route path="/" element={isLogged ? <HomeLogueado /> : <HomeNoLogin />} />
           <Route path="/coleccion" element={<ColeccionUsuario />} />
+          <Route path="/genero/:genero" element={<GeneroJuegos />} />
+          <Route path="/juegos" element={<VerAllGames/>}/>
         </Routes>
         
         <Footer/>

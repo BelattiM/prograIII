@@ -1,5 +1,5 @@
-import './../../../index.css'
 import React, { useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import imgAccion from './../../../assets/images/GenerosJuegos/juegoAccion.png'
 import imgAventura from './../../../assets/images/GenerosJuegos/juegoAventura.png'
 import imgDeportes from './../../../assets/images/GenerosJuegos/juegoDeportes.png'
@@ -12,6 +12,7 @@ import imgOtro from './../../../assets/images/GenerosJuegos/juegoOtro.png'
 function ListaJuegosPorGenero(){
     
     const scrollRef = useRef(null);
+    const navigate = useNavigate();
     
     const handleScrollIzquierda = () => {
         scrollRef.current.scrollBy({ left: -300, behavior: 'smooth' });
@@ -37,7 +38,7 @@ function ListaJuegosPorGenero(){
                 <button className="flecha izquierda" onClick={handleScrollIzquierda}>◄</button>
                 <div className='contenedorLista' ref={scrollRef}>
                     {Object.entries(imagenesGenero).map(([genero, imagen]) => (
-                        <div key={genero} className="card-genero">
+                        <div key={genero} className="card-genero" onClick={() => navigate(`/genero/${genero}`)}>
                             <img src={imagen} alt={genero} className="imagen-genero" />
                             <p className='titulo-genero'>{genero}</p>
                         </div>

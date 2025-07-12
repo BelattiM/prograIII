@@ -2,6 +2,7 @@
 @import url('./styles/paginasHome.css');
 @import url('./styles/ListasHome.css');
 @import url('./styles/ColeccionUsuario.css');
+@import url('./styles/GeneroJuegos.css');
 
 body {
   margin: 0;

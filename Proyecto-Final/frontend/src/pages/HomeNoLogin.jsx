@@ -1,7 +1,7 @@
-import './../../index.css'
-import FondoDescripcion from './../../assets/images/FondoDescripcion.png'
-import ListaJuegosDestacados from '../../components/ui/ListaJuegosDestacados/ListaJuegosDestacados';
-import ListaJuegosPorGenero from '../../components/ui/ListaJuegosPorGenero/ListaJuegosPorGenero';
+
+import FondoDescripcion from './../assets/images/FondoDescripcion.png'
+import ListaJuegosDestacados from '../components/ui/ListaJuegosDestacados/ListaJuegosDestacados';
+import ListaJuegosPorGenero from '../components/ui/ListaJuegosPorGenero/ListaJuegosPorGenero';
 
 function HomeNoLogin(){
     

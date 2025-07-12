@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 .home-container{
+    min-height: 80vh;
     position: relative;
     display: flex;
     flex-direction: column;

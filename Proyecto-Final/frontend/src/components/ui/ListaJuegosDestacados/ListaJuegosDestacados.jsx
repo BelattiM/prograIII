@@ -1,5 +1,5 @@
-import './../../../index.css'
 import React, { useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import imgAccion from './../../../assets/images/GenerosJuegos/juegoAccion.png'
 import imgAventura from './../../../assets/images/GenerosJuegos/juegoAventura.png'
 import imgDeportes from './../../../assets/images/GenerosJuegos/juegoDeportes.png'
@@ -10,6 +10,7 @@ import imgOtro from './../../../assets/images/GenerosJuegos/juegoOtro.png'
 import useFetchJuegos from '../../../hooks/fetchJuegos';
 
 function ListaJuegosDestacados(){
+    const navigate = useNavigate();
     const { juegos, loading, error } = useFetchJuegos();
     const scrollRef = useRef(null);
 
@@ -34,7 +35,10 @@ function ListaJuegosDestacados(){
 
     return (
         <div className='ListaJuegos'>
-            <h2>Juegos Destacados</h2>
+            <div style={{display:'flex', alignItems:'center', gap:'1rem'}}>
+                <h2>Juegos Disponibles</h2>
+                <span className='ver-todos-link' onClick={() => navigate('/juegos')}>Ver todos</span>
+            </div>
             <div className='contenedorScroll'>
                 <button className="flecha izquierda" onClick={handleScrollIzquierda}>◄</button>
                 <div className='contenedorLista' ref={scrollRef}>
