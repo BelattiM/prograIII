@@ -11,9 +11,6 @@ function HomeNoLogin(){
             <div className='descripcion-pagina'>
                 <img src={FondoDescripcion} alt="Fondo Gamer" />
                 <span>"Gestioná tu colección de videojuegos, hacé seguimiento de tu progreso y descubrí lo que ya jugaste o te falta terminar. ¡Todo en un solo lugar! Registrate para comenzar"</span>
-                <button>
-                    Registrate
-                </button>
             </div>
             <ListaJuegosPorGenero/>
             <ListaJuegosDestacados/>

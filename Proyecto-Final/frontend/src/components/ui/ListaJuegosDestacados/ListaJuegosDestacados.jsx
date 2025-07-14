@@ -46,10 +46,18 @@ function ListaJuegosDestacados(){
                         const imagen = imagenesGenero[juego.genero] || imgOtro;
 
                         return (
-                            <div key={juego.id} className="card-juego">
+                            <div key={juego.id} className="card-juego"
+                                onClick={() => {
+                                    if (juego.linkwiki) {
+                                        window.open(juego.linkwiki, '_blank', 'noopener,noreferrer');
+                                    }
+                                }}>
                                 <img src={imagen} alt={juego.genero} className="imagen-genero" />
                                 <p className='titulo-juego'>{juego.titulo}</p>
                                 <p className='genero-juego'>{juego.genero}</p>
+                                <p className='subtitulo-wiki'>
+                                    {juego.linkwiki ? 'Ir a la wiki' : 'No tiene wiki'}
+                                </p>
                             </div>
                         );
                     })}

@@ -60,6 +60,10 @@
     filter: brightness(0.6);
 }
 .mensaje-vacio-lista {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin: 32px 0;
     position: relative;
     text-align: center;
@@ -68,4 +72,18 @@
     color: #fff;
     font-size: 1.1rem;
     position: relative;
+    margin-bottom: 5%;
+}
+/*Agregar Juegos a Coleccion*/
+.btn-agregar-a-coleccion {
+    font-family: 'Press Start 2P', monospace;
+    position: absolute;
+    bottom: 10px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
 }

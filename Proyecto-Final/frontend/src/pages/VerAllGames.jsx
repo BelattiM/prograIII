@@ -47,6 +47,7 @@ function VerAllGames() {
                             >
                                 <img src={imagen} alt={juego.genero} className="imagen-genero" />
                                 <p className='titulo-juego'>{juego.titulo}</p>
+                                <p className='genero-juego'>{juego.genero}</p>
                                 <p className='subtitulo-wiki'>
                                     {juego.linkwiki ? 'Ir a la wiki' : 'No tiene wiki'}
                                 </p>

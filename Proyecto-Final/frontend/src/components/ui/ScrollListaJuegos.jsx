@@ -18,24 +18,17 @@ const imagenesGenero = {
     'Otro': imgOtro
 };
 
-function ScrollListaJuegos({ titulo, juegos, scrollRef, handleScroll, onAgregarJuego }) {
-    const mostrarAgregar = titulo === 'Pendientes';
+const user = JSON.parse(localStorage.getItem('user'));
+const userId = user?.id;
+
+function ScrollListaJuegos({ titulo, juegos, scrollRef, handleScroll, onAgregarJuego, onBorrarJuego }) {
+    const mostrarAgregar = titulo === 'Pendientes' || titulo === 'Jugando' ;
     return (
         <>
             <h3 className='titulo-lista'>{titulo}</h3>
             <div className='contenedorScroll'>
                 <button className="flecha izquierda" onClick={() => handleScroll(scrollRef, -1)}>◄</button>
                 <div className='contenedorLista' ref={scrollRef}>
-                    {juegos.map(juego => {
-                        const imagen = imagenesGenero[juego.genero] || imgOtro;
-                        return (
-                            <div key={juego.id} className="card-juego">
-                                <img src={imagen} alt={juego.genero} className="imagen-genero" />
-                                <p className='titulo-juego'>{juego.titulo}</p>
-                                <p className='genero-juego'>{juego.genero}</p>
-                            </div>
-                        );
-                    })}
                     {mostrarAgregar && (
                         <div className="card-juego card-agregar" onClick={onAgregarJuego}>
                             <img src={imgAgregar} alt="Agregar juego" className="imagen-genero" />
@@ -43,6 +36,23 @@ function ScrollListaJuegos({ titulo, juegos, scrollRef, handleScroll, onAgregarJ
                             <p>Agregar juego</p>
                         </div>
                     )}
+                    {juegos.map(juego => {
+                        const imagen = imagenesGenero[juego.genero] || imgOtro;
+                        return (
+                            <div key={juego.id} className="card-juego">
+                                <p className='borrar-juego-usuario'>Borrar de la lista</p>
+                                <img src={imagen} alt={juego.genero} className="imagen-genero" />
+                                <p className='titulo-juego'>{juego.titulo}</p>
+                                {titulo === 'Completados' && (
+                                    <>
+                                        <p className='calificacion-juego'>Calificación: {juego.calificacion ?? '-'}/10</p>
+                                        <p className='tiempo-juego'>Tiempo de juego: {juego.tiempoDeJuego ?? '0'}hs</p>
+                                    </>
+                                )}
+                                <p className='borrar-juego-usuario' onClick={() => onBorrarJuego(juego.id, userId)}>Borrar de la lista</p>
+                            </div>
+                        );
+                    })}
                 </div>
                 <button className="flecha derecha" onClick={() => handleScroll(scrollRef, 1)}>►</button>    
             </div>

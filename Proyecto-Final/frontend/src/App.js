@@ -10,6 +10,7 @@ import HomeLogueado from './pages/HomeLogueado.jsx';
 import ColeccionUsuario from './pages/ColeccionUsuario.jsx';
 import GeneroJuegos from './pages/GeneroJuegos.jsx';
 import VerAllGames from './pages/VerAllGames.jsx';
+import AgregarJuegoUsuario from './pages/AgregarJuegoUsuario.jsx';
 
 function App() {
   const [showLogin, setShowLogin] = useState(false);
@@ -41,6 +42,7 @@ function App() {
           <Route path="/coleccion" element={<ColeccionUsuario />} />
           <Route path="/genero/:genero" element={<GeneroJuegos />} />
           <Route path="/juegos" element={<VerAllGames/>}/>
+          <Route path="/agregarJuegoUsuario" element={<AgregarJuegoUsuario/>} />
         </Routes>
         
         <Footer/>
