@@ -7,7 +7,7 @@ const soloAdmin = require('../middleware/admin.middleware');
 rutaJuegos.get('/', juegoController.listar)
 rutaJuegos.get('/:id', juegoController.getById)
 rutaJuegos.post('/', verificarToken, soloAdmin, juegoController.crear)
-rutaJuegos.delete('/:id', juegoController.borrar)
-rutaJuegos.put('/:id', juegoController.actualizar)
+rutaJuegos.delete('/:id', verificarToken, soloAdmin, juegoController.borrar)
+rutaJuegos.put('/:id', verificarToken, soloAdmin, juegoController.actualizar)
 
 module.exports = rutaJuegos;

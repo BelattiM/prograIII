@@ -73,8 +73,8 @@ const ModalRegister = ({ isOpen, onClose }) => {
                     <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)}/>
                     {errorMsg !== '' && <p className='mensaje-error'>X {errorMsg} X</p>}
                     <div className='contenedor-botones'>
-                        <button className='boton-registrar' type='submit'>Registrarse</button>
-                        <button className='boton-cancelar' type='button' onClick={handleClose}> Cancelar </button>
+                        <button className='boton-amarillo' type='submit'>Registrarse</button>
+                        <button className='boton-rojo' type='button' onClick={handleClose}> Cancelar </button>
                     </div>
                 </form>
                 }

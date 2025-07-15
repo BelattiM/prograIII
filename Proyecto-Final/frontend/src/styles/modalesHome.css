@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+
+    
+
 .modal-backdrop {
     position: fixed;
     top: 0;
@@ -13,6 +18,7 @@
 
 /* Contenedor del modal */
 .modal {
+    font-family: 'Press Start 2P', monospace;
     width: 550px;
     position: relative;
     background-color: #002; 
@@ -58,6 +64,12 @@
     box-shadow: 0 0 8px #ffff88;
 }
 
+.modal input[type="number"]::-webkit-outer-spin-button,
+.modal input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
 /* Contenedor para los botones */
 .contenedor-botones {
     display: flex;
@@ -69,8 +81,8 @@
     flex-wrap: wrap;    /* << opcional: permite que pasen a abajo si hay poco espacio */
 }
 
-/* Botón registrar */
-.boton-registrar {
+/* Botón amarillo */
+.boton-amarillo {
     width: auto;
     font-family: 'Press Start 2P', monospace;
     font-size: 14px;
@@ -85,12 +97,12 @@
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.boton-registrar:hover {
+.boton-amarillo:hover {
     background-color: #000;
     color: #ffff00;
     box-shadow: 0 0 20px #ffff00;
 }
-.boton-ingresar {
+.boton-verde {
     width: auto;
     font-family: 'Press Start 2P', monospace;
     font-size: 14px;
@@ -105,14 +117,14 @@
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.boton-ingresar:hover {
+.boton-verde:hover {
     background-color: #000;
     color: #00ff00;
     box-shadow: 0 0 20px #00ff00;
 }
 
-/* Botón cancelar */
-.boton-cancelar {
+/* Botón rojo */
+.boton-rojo {
     width: auto;
     font-family: 'Press Start 2P', monospace;
     font-size: 14px;
@@ -127,7 +139,7 @@
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.boton-cancelar:hover {
+.boton-rojo:hover {
     background-color: #000;
     color: #ff0000;
     box-shadow: 0 0 20px #ff0000;
@@ -150,4 +162,45 @@
     color: green;
     font-weight: bold;
     text-align: center;
+}
+/* Modales Admin */
+.modal select {
+    background-color: #001522;
+    border: 3px solid #ffff00;
+    border-radius: 8px;
+    padding: 12px 15px;
+    font-family: 'Press Start 2P', monospace;
+    color: #ffff00;
+    font-size: 13px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    appearance: none; /* Oculta flecha por defecto */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.modal select:focus {
+    border-color: #ffff88;
+    box-shadow: 0 0 8px #ffff88;
+}
+
+.modal textarea {
+    background-color: #001522;
+    border: 3px solid #ffff00;
+    border-radius: 8px;
+    padding: 12px 15px;
+    font-family: 'Press Start 2P', monospace;
+    color: #ffff00;
+    font-size: 13px;
+    outline: none;
+    resize: none;
+}
+
+.modal textarea::placeholder {
+    color: #ffff00aa;
+}
+
+.modal textarea:focus {
+    border-color: #ffff88;
+    box-shadow: 0 0 8px #ffff88;
 }

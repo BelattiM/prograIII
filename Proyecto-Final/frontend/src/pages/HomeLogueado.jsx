@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import ListaJuegosDestacados from '../components/ui/ListaJuegosDestacados'
+import ListaJuegosDisponibles from '../components/ui/ListaJuegosDisponibles'
 import ListaJuegosPorGenero from '../components/ui/ListaJuegosPorGenero'
 
 function HomeLogueado(){
@@ -7,7 +7,7 @@ function HomeLogueado(){
         <div className='home-container'>
             <div className='home-overlay'></div>
             <Link to="/coleccion" className='boton-coleccion'>Explora tu Coleccion</Link>
-            <ListaJuegosDestacados/>
+            <ListaJuegosDisponibles/>
             <ListaJuegosPorGenero/>
         </div>
     )

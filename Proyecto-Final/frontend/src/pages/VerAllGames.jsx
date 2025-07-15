@@ -55,7 +55,7 @@ function VerAllGames() {
                         );
                     })
                 ) : (
-                    <p>No hay juegos disponibles.</p>
+                    <p className='mensaje-vacio-lista'>No hay juegos disponibles.</p>
                 )}
             </div>
         </div>

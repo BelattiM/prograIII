@@ -1,9 +1,13 @@
 import React, {useState} from 'react';
+import { useNavigate } from 'react-router-dom';
+
 
 const ModalLogin = ({ isOpen, onClose, onLoginSuccess, setUser}) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [errorMsg, setErrorMsg] = useState('');
+
+    const navigate = useNavigate();
 
     const resetInputs = () => {
         setEmail('');
@@ -44,6 +48,11 @@ const ModalLogin = ({ isOpen, onClose, onLoginSuccess, setUser}) => {
             localStorage.setItem('token', token);
             localStorage.setItem('user', JSON.stringify(usuario));
             setUser(usuario);
+            if (usuario.rol === 'admin') {
+                navigate('/admin');
+            } else {
+                navigate('/');
+            }
             resetInputs();
             onLoginSuccess();
         } catch (error) {
@@ -63,8 +72,8 @@ const ModalLogin = ({ isOpen, onClose, onLoginSuccess, setUser}) => {
                     <input type="password" placeholder="Contraseña" value={password} onChange={(e) => setPassword(e.target.value)}/>
                     {errorMsg !== '' && <p className='mensaje-error'>X {errorMsg} X</p>}
                     <div className='contenedor-botones'>
-                        <button className='boton-ingresar' type="submit">Ingresar</button>
-                        <button className='boton-cancelar' type="button" onClick={handleClose}>Cancelar</button>  
+                        <button className='boton-verde' type="submit">Ingresar</button>
+                        <button className='boton-rojo' type="button" onClick={handleClose}>Cancelar</button>  
                     </div>
                 </form>
             </div>

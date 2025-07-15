@@ -3,6 +3,8 @@
 @import url('./styles/ListasHome.css');
 @import url('./styles/ColeccionUsuario.css');
 @import url('./styles/GeneroJuegos.css');
+@import url('./styles/Header.css');
+@import url('./styles/Footer.css');
 
 body {
   margin: 0;

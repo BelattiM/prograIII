@@ -1,4 +1,8 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 .Footer{
+    font-family: 'Press Start 2P', monospace;
     position: relative;
     align-self: end;
     height: 10vh;
@@ -11,6 +15,7 @@
     z-index: 1;
 }
 .Footer span{
+    margin: 0 10px;
     color: #ddd;
     z-index: 1;
 }

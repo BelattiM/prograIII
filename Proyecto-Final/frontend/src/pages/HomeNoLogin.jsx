@@ -1,6 +1,6 @@
 
 import FondoDescripcion from './../assets/images/FondoDescripcion.png'
-import ListaJuegosDestacados from '../components/ui/ListaJuegosDestacados';
+import ListaJuegosDisponibles from '../components/ui/ListaJuegosDisponibles';
 import ListaJuegosPorGenero from '../components/ui/ListaJuegosPorGenero';
 
 function HomeNoLogin(){
@@ -13,7 +13,7 @@ function HomeNoLogin(){
                 <span>"Gestioná tu colección de videojuegos, hacé seguimiento de tu progreso y descubrí lo que ya jugaste o te falta terminar. ¡Todo en un solo lugar! Registrate para comenzar"</span>
             </div>
             <ListaJuegosPorGenero/>
-            <ListaJuegosDestacados/>
+            <ListaJuegosDisponibles/>
         </div>
     );
 }
