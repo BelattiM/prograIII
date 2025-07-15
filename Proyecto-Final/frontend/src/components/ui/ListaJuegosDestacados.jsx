@@ -1,13 +1,13 @@
 import React, { useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import imgAccion from './../../../assets/images/GenerosJuegos/juegoAccion.png'
-import imgAventura from './../../../assets/images/GenerosJuegos/juegoAventura.png'
-import imgDeportes from './../../../assets/images/GenerosJuegos/juegoDeportes.png'
-import imgPlataforma from './../../../assets/images/GenerosJuegos/juegoPlataforma.png'
-import imgRPG from './../../../assets/images/GenerosJuegos/juegoRPG.png'
-import imgEstrategia from './../../../assets/images/GenerosJuegos/juegoEstrategia.png'
-import imgOtro from './../../../assets/images/GenerosJuegos/juegoOtro.png'
-import useFetchJuegos from '../../../hooks/fetchJuegos';
+import imgAccion from '../../assets/images/GenerosJuegos/juegoAccion.png'
+import imgAventura from '../../assets/images/GenerosJuegos/juegoAventura.png'
+import imgDeportes from '../../assets/images/GenerosJuegos/juegoDeportes.png'
+import imgPlataforma from '../../assets/images/GenerosJuegos/juegoPlataforma.png'
+import imgRPG from '../../assets/images/GenerosJuegos/juegoRPG.png'
+import imgEstrategia from '../../assets/images/GenerosJuegos/juegoEstrategia.png'
+import imgOtro from '../../assets/images/GenerosJuegos/juegoOtro.png'
+import useFetchJuegos from '../../hooks/fetchJuegos';
 
 function ListaJuegosDestacados(){
     const navigate = useNavigate();

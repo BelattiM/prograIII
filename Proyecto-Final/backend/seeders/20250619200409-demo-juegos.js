@@ -233,14 +233,6 @@ module.exports = {
         createdAt: new Date(),
         updatedAt: new Date()
       },
-      {
-        titulo: 'Juego Aventura 1',
-        plataforma: 'PlayStation',
-        genero: 'Otro',
-        linkwiki: null,
-        createdAt: new Date(),
-        updatedAt: new Date()
-      }
     ]);
   },
 

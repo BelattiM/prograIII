@@ -1,4 +1,3 @@
-import './../../../../index.css'
 import React, {useState} from 'react';
 
 const ModalLogin = ({ isOpen, onClose, onLoginSuccess, setUser}) => {
@@ -17,8 +16,12 @@ const ModalLogin = ({ isOpen, onClose, onLoginSuccess, setUser}) => {
         onClose();
     };
 
-    const handleSubmit = async (e) => {
+    const handleLogin = async (e) => {
         e.preventDefault();
+        if (!email || !password) {
+            setErrorMsg('Todos los campos son obligatorios');
+            return;
+        }
         try {
             const response = await fetch('http://localhost:3001/api/usuarios/login', {
                 method: 'POST',
@@ -55,7 +58,7 @@ const ModalLogin = ({ isOpen, onClose, onLoginSuccess, setUser}) => {
         <div className="modal-backdrop">
             <div className="modal">
                 <h2>Iniciar Sesión</h2>
-                <form onSubmit={handleSubmit} style={{display:'flex', flexDirection:'column', gap:'1rem'}}>
+                <form onSubmit={handleLogin} style={{display:'flex', flexDirection:'column', gap:'1rem'}}>
                     <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)}/>
                     <input type="password" placeholder="Contraseña" value={password} onChange={(e) => setPassword(e.target.value)}/>
                     {errorMsg !== '' && <p className='mensaje-error'>X {errorMsg} X</p>}

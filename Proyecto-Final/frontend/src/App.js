@@ -4,8 +4,8 @@ import './App.css';
 import Header from './components/layout/header/header.jsx'; 
 import Footer from './components/layout/footer/footer.jsx';
 import HomeNoLogin from './pages/HomeNoLogin.jsx';
-import ModalLogin from './components/ui/modales/LogInModal/LogInModal';
-import ModalSignin from './components/ui/modales/SignInModal/SignInModal';
+import ModalLogin from './components/ui/modales/LogInModal.jsx';
+import ModalSignin from './components/ui/modales/SignInModal.jsx';
 import HomeLogueado from './pages/HomeLogueado.jsx';
 import ColeccionUsuario from './pages/ColeccionUsuario.jsx';
 import GeneroJuegos from './pages/GeneroJuegos.jsx';
@@ -15,9 +15,14 @@ import AgregarJuegoUsuario from './pages/AgregarJuegoUsuario.jsx';
 function App() {
   const [showLogin, setShowLogin] = useState(false);
   const [showSignin, setShowSignin] = useState(false);
-  const [isLogged, setIsLogged] = useState(false);
-  const [usuario, setUser] = useState('');
-
+  const [usuario, setUser] = useState(() => {
+    const savedUser = localStorage.getItem('user');
+    return savedUser ? JSON.parse(savedUser) : '';
+  });
+  const [isLogged, setIsLogged] = useState(() => {
+    const savedUser = localStorage.getItem('user');
+    return !!savedUser;
+  });  
 
   // Función para cerrar sesión
   const handlerLogout = () => {

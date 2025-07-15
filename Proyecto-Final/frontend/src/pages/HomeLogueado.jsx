@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
-import ListaJuegosDestacados from '../components/ui/ListaJuegosDestacados/ListaJuegosDestacados'
-import ListaJuegosPorGenero from '../components/ui/ListaJuegosPorGenero/ListaJuegosPorGenero'
+import ListaJuegosDestacados from '../components/ui/ListaJuegosDestacados'
+import ListaJuegosPorGenero from '../components/ui/ListaJuegosPorGenero'
 
 function HomeLogueado(){
     return(

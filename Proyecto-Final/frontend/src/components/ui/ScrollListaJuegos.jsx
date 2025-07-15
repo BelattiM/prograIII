@@ -43,7 +43,7 @@ function ScrollListaJuegos({ titulo, juegos, scrollRef, handleScroll, onAgregarJ
                                 <p className='borrar-juego-usuario'>Borrar de la lista</p>
                                 <img src={imagen} alt={juego.genero} className="imagen-genero" />
                                 <p className='titulo-juego'>{juego.titulo}</p>
-                                {titulo === 'Completados' && (
+                                {(titulo === 'Completados' || titulo === 'Jugando') && (
                                     <>
                                         <p className='calificacion-juego'>Calificación: {juego.calificacion ?? '-'}/10</p>
                                         <p className='tiempo-juego'>Tiempo de juego: {juego.tiempoDeJuego ?? '0'}hs</p>

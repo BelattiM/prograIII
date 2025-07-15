@@ -29,10 +29,14 @@ class UsuariosController {
 
     async crear(req, res) {
         try{
-            const {username, email, password} = req.body;
+            const {username, email, password, rol} = req.body;
+
+            if (!username || !email || !password || !rol) {
+                return res.status(400).json({ detalle: 'Todos los campos son obligatorios' });
+            }
             const hashedPassword = await bcrypt.hash(password, 10)
 
-            const userNuevo = await Usuario.create({username, email, password: hashedPassword});
+            const userNuevo = await Usuario.create({username, email, password: hashedPassword, rol});
             res.status(200).json({mensaje: "Usuario creado correctamente.", userNuevo})
         }
         catch (error){

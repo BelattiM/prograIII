@@ -6,13 +6,13 @@
     position: relative;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     font-family: 'Press Start 2P', monospace;
     background-image: url(./../assets/images/FondoHome.png);
     background-repeat: repeat;
     background-size: 25%;
     background-position: top left;
-    justify-content: center;
-    align-items: center;
 }
 .home-overlay {
     position: absolute;

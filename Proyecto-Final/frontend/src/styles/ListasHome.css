@@ -5,12 +5,19 @@
     flex-direction: column;
     z-index: 1;
     color: #fff;
-    width: 90%;
+    width: 100%;
 }
 .ListaJuegos h2{
     align-self: flex-start;
     padding-left: 15px;
 }
+.wrapper-lista {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
 .contenedorLista{
     margin-top: 15px;
     max-width: 100%;

@@ -44,13 +44,12 @@ function ColeccionUsuario(){
 
     const borrarJuegoUsuario = async (juegoId, usuarioId) => {
         try {
-            const res = await fetch(`/api/juegos-usuarios/${juegoId}/${usuarioId}`, {
+            const res = await fetch(`/api/juegos-usuarios/${usuarioId}/${juegoId}`, {
                 method: 'DELETE'
             });
         
             if (res.ok) {
-              // Sacar el juego de la lista en el frontend
-                setJuegos(prev => prev.filter(j => j.id !== juegoId));
+                window.location.reload();
             } else {
                 alert('No se pudo borrar el juego');
             }
@@ -65,46 +64,46 @@ function ColeccionUsuario(){
     return(
         <div className='home-container coleccion-usuario-container'>
             <div className='home-overlay'></div>
-            <h2 className='titulo-coleccion'>Colección de {user?.username || 'Usuario'}</h2>
-            {/* Pendientes */}
-            {juegosPendientes.length === 0 ? (
-                <div className="mensaje-vacio-lista" >
-                    <h3 className='titulo-lista'>Pendientes</h3>
-                    <p className="mensaje-vacio-texto">Tu lista de deseados está vacía. Agrega alguno!</p>
-                    <div className="card-agregar" onClick={AgregarJuegoAPendiente}>
-                        <img src={imgAgregar} alt="Agregar juego" className="imagen-genero" />
-                        <span>+</span>
-                        <p>Agregar juego</p>
+                <h2 className='titulo-coleccion'>Colección de {user?.username || 'Usuario'}</h2>
+                {/* Pendientes */}
+                {juegosPendientes.length === 0 ? (
+                    <div className="mensaje-vacio-lista" >
+                        <h3 className='titulo-lista'>Pendientes</h3>
+                        <p className="mensaje-vacio-texto">Tu lista de deseados está vacía. Agrega alguno!</p>
+                        <div className="card-juego card-agregar" onClick={AgregarJuegoAPendiente}>
+                            <img src={imgAgregar} alt="Agregar juego" className="imagen-genero" />
+                            <span>+</span>
+                            <p>Agregar juego</p>
+                        </div>
                     </div>
-                </div>
-            ) : (
-                <ScrollListaJuegos titulo="Pendientes" juegos={juegosPendientes} scrollRef={scrollPendienteRef} handleScroll={handleScroll} onAgregarJuego={AgregarJuegoAPendiente} onBorrarJuego={borrarJuegoUsuario} />
-            )}
-            {/* Jugando */}
-            {juegosJugando.length === 0 ? (
-                <div className="mensaje-vacio-lista" >
-                    <h3 className='titulo-lista'>Jugando</h3>
-                    <p className="mensaje-vacio-texto">No estás jugando ningún juego. Agrega alguno!</p>
-                    <div className="card-juego card-agregar" onClick={AgregarJuegoAJugando}>
-                        <img src={imgAgregar} alt="Agregar juego" className="imagen-genero" />
-                        <span>+</span>
-                        <p>Agregar juego</p>
+                ) : (
+                    <ScrollListaJuegos titulo="Pendientes" juegos={juegosPendientes} scrollRef={scrollPendienteRef} handleScroll={handleScroll} onAgregarJuego={AgregarJuegoAPendiente} onBorrarJuego={borrarJuegoUsuario} />
+                )}
+                {/* Jugando */}
+                {juegosJugando.length === 0 ? (
+                    <div className="mensaje-vacio-lista" >
+                        <h3 className='titulo-lista'>Jugando</h3>
+                        <p className="mensaje-vacio-texto">No estás jugando ningún juego. Agrega alguno!</p>
+                        <div className="card-juego card-agregar" onClick={AgregarJuegoAJugando}>
+                            <img src={imgAgregar} alt="Agregar juego" className="imagen-genero" />
+                            <span>+</span>
+                            <p>Agregar juego</p>
+                        </div>
                     </div>
-                </div>
-            ) : (
-                <ScrollListaJuegos titulo="Jugando" juegos={juegosJugando} scrollRef={scrollJugandoRef} handleScroll={handleScroll} onAgregarJuego={AgregarJuegoAJugando} onBorrarJuego={borrarJuegoUsuario}/>
-            )}
-            {/* Completados */}
-            {juegosCompletados.length === 0 ? (
-                <div className="mensaje-vacio-lista" >
-                    <h3 className='titulo-lista'>Completados</h3>
-                    <p className="mensaje-vacio-texto">No completaste ningún juego.</p>
-                </div>
-            ) : (
-                <ScrollListaJuegos titulo="Completados" juegos={juegosCompletados} scrollRef={scrollCompletadoRef} handleScroll={handleScroll} onBorrarJuego={borrarJuegoUsuario}/>
-            )}
+                ) : (
+                    <ScrollListaJuegos titulo="Jugando" juegos={juegosJugando} scrollRef={scrollJugandoRef} handleScroll={handleScroll} onAgregarJuego={AgregarJuegoAJugando} onBorrarJuego={borrarJuegoUsuario}/>
+                )}
+                {/* Completados */}
+                {juegosCompletados.length === 0 ? (
+                    <div className="mensaje-vacio-lista" >
+                        <h3 className='titulo-lista'>Completados</h3>
+                        <p className="mensaje-vacio-texto">No completaste ningún juego.</p>
+                    </div>
+                ) : (
+                    <ScrollListaJuegos titulo="Completados" juegos={juegosCompletados} scrollRef={scrollCompletadoRef} handleScroll={handleScroll} onBorrarJuego={borrarJuegoUsuario}/>
+                )}
         </div>
     )
 }
 
-export default ColeccionUsuario
+export default ColeccionUsuario;
