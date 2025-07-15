@@ -1,0 +1,213 @@
+/*Estilos Globales de Listas*/
+.ListaJuegos{
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    color: #fff;
+    width: 100%;
+}
+.ListaJuegos h2{
+    align-self: flex-start;
+    padding-left: 15px;
+}
+.contenedorLista{
+    margin-top: 15px;
+    max-width: 100%;
+    min-width: 90%;
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    gap: 5%;
+}
+.contenedorScroll{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: 90%;
+    margin: 0 auto;
+}
+.flecha {
+    height: fit-content;
+    background: none;
+    border: none;
+    font-size: 40px;
+    color: #ddd;
+    cursor: pointer;
+    z-index: 1;
+    padding: 0 1rem;
+    user-select: none;
+}
+.flecha:hover{
+    color: #fff;
+    text-shadow: 0 0 10px #fff
+}
+.flecha:active{
+    color: #eee;
+}
+.flecha:disabled {
+    opacity: 0.3;
+    cursor: default;
+}
+
+/*Lista por genero*/
+.card-genero {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background-color: #222;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 0 10px;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    flex-shrink: 0;
+}
+.card-genero:hover {
+    transform: scale(1.05);
+}
+.card-genero:active {
+    transform: scale(1.1);
+}
+.card-genero img {
+    z-index: 1;
+    width: 200px;
+    height:200px;
+    object-fit: cover;
+    filter: brightness(0.4);
+    transition: filter 0.3s ease;
+}
+.card-genero:hover img {
+    filter: brightness(0.6);
+}
+.titulo-genero{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    color: white;
+    font-weight: bold;
+    text-shadow: 1px 1px 4px black;
+}
+
+/*Lista Juegos Destacados*/
+
+
+.card-juego{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 10px;
+    flex-shrink: 0;
+    width: 200px;
+    height: 200px;
+    margin: 0 10px;
+    color: #fff;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+.titulo-juego{
+    z-index: 1;
+}
+.ver-todos-btn {
+    position: static;
+    color: #fff;
+    background: #00c3ff;
+    font-size: 1rem;
+    padding: 0.3em 0.8em;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    margin-top: 0.2em;
+    margin-left: 1em;
+    align-self: center;
+    box-shadow: 0 2px 8px #00c3ff44;
+    transition: background 0.2s, box-shadow 0.2s;
+}
+.ver-todos-btn:hover {
+    background: #0099cc;
+    box-shadow: 0 4px 16px #00c3ff66;
+}
+.ver-todos-link {
+    color: #00c3ff;
+    font-size: 1rem;
+    margin-left: 1em;
+    cursor: pointer;
+    text-decoration: none;
+    transition: color 0.2s, text-decoration 0.2s;
+    align-self: center;
+}
+.ver-todos-link:hover {
+    color: #0099cc;
+    text-decoration: underline;
+}
+.genero-juego{
+    position: absolute;
+    z-index: 1;
+    bottom: 10px;
+    right: 10px;
+    font-size: 12px;
+}
+.imagen-genero {
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 200px;
+    margin-bottom: 0.5rem;
+    filter: brightness(0.4);
+    transition: transform 0.2s ease, filter 0.2s ease;
+    border-radius: 10px;
+}
+.card-juego:hover{
+    transform: scale(1.05);
+}
+.card-juego .imagen-genero:hover{
+    filter: brightness(0.6);
+}
+.card-juego:active {
+    transition: transform 0.05s ease;
+    transform: scale(0.95);
+}
+.error{
+    color: #fff
+}
+.loading{
+    color: #fff
+}
+.calificacion-juego{
+    margin-top: 10%;
+    justify-self: end;
+    font-size: 10px;
+    position: relative;
+}
+.tiempo-juego{
+    justify-self: end;
+    font-size: 10px;
+    position: relative;
+}
+.borrar-juego-usuario {
+    position: absolute;
+    top: 8px;
+    right: 4px;
+    font-size: 8px;
+    color: #ff5555;
+    background: rgba(0,0,0,0.5);
+    padding: 2px 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+.borrar-juego-usuario:hover {
+    background: #ff5555;
+    color: #fff;
+}

@@ -1,0 +1,133 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+.home-container{
+    min-height: 80vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Press Start 2P', monospace;
+    background-image: url(./../assets/images/FondoHome.png);
+    background-repeat: repeat;
+    background-size: 25%;
+    background-position: top left;
+}
+.home-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* oscurece con transparencia */
+    z-index: 0;
+}
+/*--------------------------------------------------*/
+/* HomeNoLogin */
+/*--------------------------------------------------*/
+.descripcion-pagina{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 60%;
+    width: 90%;
+    background-color: #003;
+    border: 5px solid #004;
+    border-radius: 10px;
+    padding: 45px 15px;
+    margin: 30px 15px 15px 15px;
+    gap: 15%;
+    z-index: 2;
+    overflow: hidden;
+}
+.descripcion-pagina img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    filter: brightness(0.2);
+}
+.descripcion-pagina span{
+    z-index: 2;
+    color: #ddd;
+    font-size: 20px;
+}
+
+/*--------------------------------------------------*/
+/* HomeLogueado */
+/*--------------------------------------------------*/
+.boton-coleccion{
+    width: fit-content;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 1rem;
+    color: #00f;
+    background-color: #000;
+    border: 4px solid #00f;
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    box-shadow: 0 0 10px #00f;
+    transition: all 0.2s ease;
+    margin: 30px 15px 15px 15px;
+    position: relative;
+}
+.boton-coleccion:hover {
+    background-color: #00f;
+    color: #000;
+    box-shadow: 0 0 20px #00f;
+}
+.boton-coleccion:active {
+    background-color: #000;
+    color: #00f;
+    box-shadow: 0 0 10px #00f;
+}
+
+/*--------------------------------------------------*/
+/* HomeAdmin */
+/*--------------------------------------------------*/
+.admin-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    width: 90%;
+    gap: 15%;
+    color: #ddd;
+}
+.admin-container h2{
+    margin-bottom: 40px;
+}
+.admin-usuarios{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+.admin-juegos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+    margin-bottom: 40px
+}
+.botones-admin {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px; /* separación entre botones */
+    margin-top: 10px;
+    align-self: center; /* evita que se estire */
+    flex-wrap: wrap;    /* opcional: permite que pasen a abajo si hay poco espacio */
+}
+.botones-admin button{
+    width: 30%;
+}

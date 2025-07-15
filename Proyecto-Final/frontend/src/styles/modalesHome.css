@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+
+    
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+/* Contenedor del modal */
+.modal {
+    font-family: 'Press Start 2P', monospace;
+    width: 550px;
+    position: relative;
+    background-color: #002; 
+    border: 5px solid #ffff00;
+    border-radius: 15px;
+    padding: 30px 40px 40px 40px;
+    max-width: 90vw;
+    box-shadow: 0 0 20px #ffff00;
+    color: #ffff00;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Título */
+.modal h2 {
+    text-align: center;
+    color: #ffff00;
+    margin: 0;
+    font-size: 18px;
+    text-shadow: 0 0 10px #ffff00;
+}
+
+/* Inputs */
+.modal input {
+    background-color: #001522;
+    border: 3px solid #ffff00;
+    border-radius: 8px;
+    padding: 12px 15px;
+    font-family: 'Press Start 2P', monospace;
+    color: #ffff00;
+    font-size: 13px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.modal input::placeholder {
+    color: #ffff00aa;
+}
+
+.modal input:focus {
+    border-color: #ffff88;
+    box-shadow: 0 0 8px #ffff88;
+}
+
+.modal input[type="number"]::-webkit-outer-spin-button,
+.modal input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Contenedor para los botones */
+.contenedor-botones {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px; /* separación entre botones */
+    margin-top: 10px;
+    align-self: center; /* << evita que se estire */
+    flex-wrap: wrap;    /* << opcional: permite que pasen a abajo si hay poco espacio */
+}
+
+/* Botón amarillo */
+.boton-amarillo {
+    width: auto;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 14px;
+    color: #000;
+    background-color: #ffff00;
+    border: 4px solid #ffff00;
+    border-radius: 12px;
+    padding: 12px 30px;
+    cursor: pointer;
+    text-transform: uppercase;
+    box-shadow: 0 0 12px #ffff00;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.boton-amarillo:hover {
+    background-color: #000;
+    color: #ffff00;
+    box-shadow: 0 0 20px #ffff00;
+}
+.boton-verde {
+    width: auto;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 14px;
+    color: #000;
+    background-color: #00ff00;
+    border: 4px solid #00ff00;
+    border-radius: 12px;
+    padding: 12px 30px;
+    cursor: pointer;
+    text-transform: uppercase;
+    box-shadow: 0 0 12px #00ff00;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.boton-verde:hover {
+    background-color: #000;
+    color: #00ff00;
+    box-shadow: 0 0 20px #00ff00;
+}
+
+/* Botón rojo */
+.boton-rojo {
+    width: auto;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 14px;
+    color: #000;
+    background-color: #ff0000;
+    border: 4px solid #ff0000;
+    border-radius: 12px;
+    padding: 12px 30px;
+    cursor: pointer;
+    text-transform: uppercase;
+    box-shadow: 0 0 12px #ff0000;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.boton-rojo:hover {
+    background-color: #000;
+    color: #ff0000;
+    box-shadow: 0 0 20px #ff0000;
+}
+.mensaje-error{
+    color: red;
+    font-family: 'Press Start 2P', monospace;
+    border: 2px solid#ff0000;
+    border-radius: 12px;
+    padding: 5px 0;
+    background-color: #000;
+}
+/*Modal Login*/
+.form-login {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.mensaje-exito {
+    color: green;
+    font-weight: bold;
+    text-align: center;
+}
+/* Modales Admin */
+.modal select {
+    background-color: #001522;
+    border: 3px solid #ffff00;
+    border-radius: 8px;
+    padding: 12px 15px;
+    font-family: 'Press Start 2P', monospace;
+    color: #ffff00;
+    font-size: 13px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    appearance: none; /* Oculta flecha por defecto */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.modal select:focus {
+    border-color: #ffff88;
+    box-shadow: 0 0 8px #ffff88;
+}
+
+.modal textarea {
+    background-color: #001522;
+    border: 3px solid #ffff00;
+    border-radius: 8px;
+    padding: 12px 15px;
+    font-family: 'Press Start 2P', monospace;
+    color: #ffff00;
+    font-size: 13px;
+    outline: none;
+    resize: none;
+}
+
+.modal textarea::placeholder {
+    color: #ffff00aa;
+}
+
+.modal textarea:focus {
+    border-color: #ffff88;
+    box-shadow: 0 0 8px #ffff88;
+}

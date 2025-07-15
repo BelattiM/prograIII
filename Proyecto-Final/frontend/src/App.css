@@ -1,0 +1,16 @@
+.App {
+  text-align: center;
+  height: 100vh;
+  overflow-x: hidden;
+}
+.App::-webkit-scrollbar {
+  width: 10px;
+  background: #012;
+}
+.App::-webkit-scrollbar-thumb {
+  background: #0096c4;
+  border-radius: 8px;
+}
+.App::-webkit-scrollbar-thumb:hover {
+  background: #0099cc;
+}

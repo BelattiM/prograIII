@@ -1,0 +1,36 @@
+.titulo-juegos-genero{
+    text-align: center;
+    color: #fff;
+    font-size: 24px;
+    margin: 20px 0;
+    position: relative;
+}
+.lista-juegos-genero{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+.juego-item{
+    position: relative;
+}
+.genero-not-found {
+    color: #f00;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 20px;
+    position: relative
+}
+.subtitulo-wiki {
+    position: absolute;
+    z-index: 1;
+    top: 10px;
+    right: 10px;
+    font-size: 12px;
+}
+.card-juego:hover .subtitulo-wiki{
+    color: #fff;
+    text-decoration: underline;
+    cursor: pointer;
+}

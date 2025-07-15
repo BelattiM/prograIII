@@ -1,0 +1,90 @@
+.titulo-coleccion {
+    text-align: center;
+    color: #fff;
+    font-size: 24px;
+    margin: 20px 0;
+    position: relative;
+}
+.titulo-lista {
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    margin: 20px 0;
+    position: relative;
+}
+.boton-agregar-juego{
+    position: relative;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.card-agregar{
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    filter: none;
+    transition: all 0.3s ease;
+}
+.card-agregar .imagen-genero {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.4);
+    z-index: 1;
+    pointer-events: none;
+}
+.card-agregar span, .card-agregar p {
+    z-index: 4;
+    position: relative;
+}
+.card-agregar span {
+    font-size: 3rem;
+    color: #fff;
+}
+.card-agregar p {
+    color: #fff;
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+.card-agregar:hover .imagen-genero {
+    filter: brightness(0.6);
+}
+.mensaje-vacio-lista {
+    color: #ddd;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 32px 0;
+    position: relative;
+    text-align: center;
+}
+.mensaje-vacio-texto {
+    color: #fff;
+    font-size: 1.1rem;
+    position: relative;
+    margin-bottom: 5%;
+}
+/*Agregar Juegos a Coleccion*/
+.btn-agregar-a-coleccion {
+    font-family: 'Press Start 2P', monospace;
+    position: absolute;
+    bottom: 10px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
