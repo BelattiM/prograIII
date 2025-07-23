@@ -1,5 +1,12 @@
 # 🚀 Sistema Web Full-Stack con Docker
 
+## 🤓 Integrantes del grupo
+
+- Ramiro Pizzico
+- Ana Paula Schechtel
+- Facundo Tischler
+- Mateo Belatti
+
 ## 📋 Componentes Principales
 
 ### 🎯 Arquitectura General
